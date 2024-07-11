@@ -9,7 +9,7 @@ import UIKit
 
 public class SwipeClass {
     
-    typealias SwipeAction = () -> Void
+   public typealias SwipeAction = () -> Void
     
     weak var viewController: UIViewController?
     var leftAction: SwipeAction?, rightAction: SwipeAction?
