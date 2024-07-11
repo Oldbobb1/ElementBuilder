@@ -14,7 +14,7 @@ public class SwipeClass {
     weak var viewController: UIViewController?
     var leftAction: SwipeAction?, rightAction: SwipeAction?
     
-    init(viewController:UIViewController,leftAction: @escaping SwipeAction ,rightAction: @escaping SwipeAction ) {
+  public init(viewController:UIViewController,leftAction: @escaping SwipeAction ,rightAction: @escaping SwipeAction ) {
         self.viewController = viewController
         self.leftAction = leftAction
         self.rightAction = rightAction
