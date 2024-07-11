@@ -5,6 +5,7 @@
 import UIKit
 
 public class DateAndWeekDayFormatter {
+    public init(){}
    public func dateCurrent(to stackView: UIStackView, withDay day: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EE"
