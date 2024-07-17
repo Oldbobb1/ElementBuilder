@@ -5,40 +5,70 @@
 import UIKit
 
 public class ButtonsWithAction {
+
+public static func makeButton(setTitle: String? = nil, cornerRadius: CGFloat? = nil, content: UIControl.ContentHorizontalAlignment? = nil, setTitleColor: UIColor? = nil, font: UIFont? = nil, configuration: UIButton.Configuration? = nil, clipsToBounds: Bool? = nil, backgroundColor: UIColor? = nil, systemName: String? = nil,setImage: UIImage? = nil, imageSize: CGSize? = nil,alpha: Double? = nil) -> UIButton {
+    let button = UIButton(type: .system)
+    button.setTitle(setTitle, for: .normal)
+    button.setTitleColor(setTitleColor, for: .normal)
+    button.layer.cornerRadius = cornerRadius ?? 0
+    button.contentHorizontalAlignment = content ?? .center
+    button.clipsToBounds = clipsToBounds ?? true
+    button.titleLabel?.font = font
+    button.configuration = configuration
+    button.backgroundColor = backgroundColor ?? .systemBackground
     
-    public static  func createButtonWithAction(setTitle: String, cornerRadius: CGFloat?, content: UIControl.ContentHorizontalAlignment ) -> UIButton {
-        let but = UIButton(type: .system)
-        but.setTitle(setTitle, for: .normal)
-        but.setTitleColor(.label, for: .normal)
-        but.layer.cornerRadius = cornerRadius ?? 0
-        but.contentHorizontalAlignment = content
-        but.clipsToBounds = true
-        but.titleLabel?.font = UIFont.systemFont(ofSize: 17)
-        return but
-    }
-    
-    public static  func makeButton(setTitle: String) -> UIButton {
-        let but = UIButton(type: .system)
-        but.setTitle(setTitle, for: .normal)
-        but.setTitleColor(.label, for: .normal)
-        but.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        but.configuration = .plain()
-        return but
-    }
-    // MARK: - функция с установкой размеров для изображения.
-    public static func createButtonWithSystemImage(systemName: String, setImage: UIImage?) -> UIButton {
-        let button = UIButton(type: .system)
+    if let systemName = systemName {
         let image = setImage ?? UIImage(systemName: systemName)
-        let newSize = CGSize(width: 65, height: 60)
-        UIGraphicsBeginImageContext(newSize)
-        image?.draw(in: CGRect(origin: .zero, size: newSize))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        button.setImage(newImage, for: .normal)
-        button.alpha = 0.5
-        button.layer.cornerRadius = 360
-        return button
+        if let image = image {
+//            let newSize = CGSize(width: 65, height: 60)
+            let newSize = imageSize ?? CGSize(width: 65, height: 60)
+            UIGraphicsBeginImageContext(newSize)
+            image.draw(in: CGRect(origin: .zero, size: newSize))
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            button.setImage(newImage, for: .normal)
+            button.alpha = alpha ?? 0
+        }
+    } else if let setImage = setImage {
+        button.setImage(setImage, for: .normal)
     }
+    return button
+}
+    
+    // public static  func createButtonWithAction(setTitle: String, cornerRadius: CGFloat?, content: UIControl.ContentHorizontalAlignment ) -> UIButton {
+    //     let but = UIButton(type: .system)
+    //     but.setTitle(setTitle, for: .normal)
+    //     but.setTitleColor(.label, for: .normal)
+    //     but.layer.cornerRadius = cornerRadius ?? 0
+    //     but.contentHorizontalAlignment = content
+    //     but.clipsToBounds = true
+    //     but.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+    //     return but
+    // }
+    
+    // public static  func makeButton(setTitle: String) -> UIButton {
+    //     let but = UIButton(type: .system)
+    //     but.setTitle(setTitle, for: .normal)
+    //     but.setTitleColor(.label, for: .normal)
+    //     but.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+    //     but.configuration = .plain()
+    //     return but
+    // }
+    
+    // MARK: - функция с установкой размеров для изображения.
+    // public static func createButtonWithSystemImage(systemName: String, setImage: UIImage?) -> UIButton {
+    //     let button = UIButton(type: .system)
+    //     let image = setImage ?? UIImage(systemName: systemName)
+    //     let newSize = CGSize(width: 65, height: 60)
+    //     UIGraphicsBeginImageContext(newSize)
+    //     image?.draw(in: CGRect(origin: .zero, size: newSize))
+    //     let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    //     UIGraphicsEndImageContext()
+    //     button.setImage(newImage, for: .normal)
+    //     button.alpha = 0.5
+    //     button.layer.cornerRadius = 360
+    //     return button
+    // }
     
 //    public static func createSwitchButton(isOn: Bool) -> UISwitch {
 //        let switchButton = UISwitch()
