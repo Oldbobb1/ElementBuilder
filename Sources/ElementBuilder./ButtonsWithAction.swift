@@ -1,11 +1,8 @@
-// ButtonsWithAction.swift
-
-//  Created by Bobbi R. on 11.07.24.
-
 import UIKit
 
-public class ButtonsWithAction {
 
+public class ButtonsWithAction {
+    
 public static func makeButton(setTitle: String? = nil, cornerRadius: CGFloat? = nil, content: UIControl.ContentHorizontalAlignment? = nil, setTitleColor: UIColor? = nil, font: UIFont? = nil, configuration: UIButton.Configuration? = nil, clipsToBounds: Bool? = nil, backgroundColor: UIColor? = nil, systemName: String? = nil,setImage: UIImage? = nil, imageSize: CGSize? = nil,alpha: Double? = nil) -> UIButton {
     let button = UIButton(type: .system)
     button.setTitle(setTitle, for: .normal)
