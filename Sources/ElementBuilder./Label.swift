@@ -1,7 +1,3 @@
-//  Label.swift
-
-//  Created by Bobbi R. on 11.07.24.
-
 import UIKit
 
 public class Label {
