@@ -1,5 +1,6 @@
 import UIKit
 
+
 public class SwipeClass {
     
    public typealias SwipeAction = () -> Void

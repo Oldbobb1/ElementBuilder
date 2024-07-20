@@ -1,5 +1,6 @@
 import UIKit
 
+
 public class Label {
     public  static func label(text: String, fontSize: CGFloat, weight: UIFont.Weight, textColor: UIColor?,textAlignment: NSTextAlignment, numberOfLines: Int? = nil,backgroundColor: UIColor? = nil ,clipsToBounds: Bool? = nil,cornerRadius: CGFloat? = nil ) -> UILabel {
         let label = UILabel()

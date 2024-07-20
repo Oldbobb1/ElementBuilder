@@ -1,5 +1,6 @@
 import UIKit
 
+
 public class Image {
     public  static  func image(_ named: String,cornerRadius: CGFloat, contentMode: UIView.ContentMode, clipsToBounds: Bool? = nil ) -> UIImageView {
         let imageView = UIImageView()
