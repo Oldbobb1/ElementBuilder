@@ -3,7 +3,7 @@ import UIKit
 
 public class TableView {
     public  static func tableView(frame: CGRect? = nil, style: UITableView.Style? = nil, backgroundColor: UIColor? = nil,clipsToBounds: Bool? = nil ) -> UITableView {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .null, style: .grouped)
         tableView.backgroundColor = backgroundColor
         tableView.showsVerticalScrollIndicator = false
         tableView.clipsToBounds = clipsToBounds ?? false
