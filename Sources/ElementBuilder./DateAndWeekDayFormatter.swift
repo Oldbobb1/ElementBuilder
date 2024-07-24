@@ -13,9 +13,7 @@ public class DateAndWeekDayFormatter {
         dayOfWeekLabel.text = "\(dayOfWeek)\n  \(dayOfMonth)"
         dayOfWeekLabel.numberOfLines = 0
         dayOfWeekLabel.font = UIFont.systemFont(ofSize: 13)
-       dayOfWeekLabel.layer.borderWidth = 1
-       dayOfWeekLabel.layer.cornerRadius = 10
-        
+       
         stackView.addArrangedSubview(dayOfWeekLabel)
     }
 }
