@@ -1,156 +1,101 @@
-# Описание фреймворка ElementBuilder
+# ElementBuilder Framework
 
-## Введение
-Фреймворк **ElementBuilder** предназначен для упрощения создания и управления элементами пользовательского интерфейса в приложениях на основе UIKit, написанных на языке Swift. Он предоставляет удобные методы для создания и настройки различных UI-компонентов, таких как кнопки, текстовые поля, метки, таблицы, контейнеры и изображения. Кроме того, фреймворк включает класс для обработки жестов свайпа.
+## Introduction
 
-## Цель
-Целью ElementBuilder является предоставление простого и интуитивно понятного интерфейса для разработки UI-компонентов, что позволяет сократить количество кода и упростить процесс создания пользовательских интерфейсов.
+The **ElementBuilder** framework is designed to simplify the creation and management of user interface elements in UIKit-based iOS applications using Swift. It offers a set of methods to create and configure various UI components such as buttons, text fields, labels, tables, containers, and images. Additionally, it includes a class for handling swipe gestures.
 
-## Основные возможности
-1. **Создание UI-элементов**: Методы для создания различных элементов пользовательского интерфейса, таких как кнопки, текстовые поля, метки, таблицы, контейнеры и изображения.
-2. **Настройка стилей**: Возможность настраивать стили для каждого элемента через словари стилей.
-3. **Обработка жестов свайпа**: Класс для управления жестами свайпа, с поддержкой обработки свайпов влево и вправо.
+## Purpose
 
-## Преимущества
-- **Удобство**: Простой интерфейс для создания и настройки элементов UI.
-- **Сокращение кода**: Уменьшение объема кода, необходимого для создания и настройки элементов UI.
-- **Гибкость**: Возможность легко настраивать стили и свойства элементов через словари стилей.
-- **Расширяемость**: Возможность добавления новых методов и расширения функциональности фреймворка.
+The goal of **ElementBuilder** is to provide a simple and intuitive interface for developing UI components, reducing the amount of code needed and making the process of creating user interfaces more straightforward and flexible.
 
-## Основные методы и классы
-Фреймворк включает следующие основные методы и классы:
+## Key Features
 
-- `ButtonsWithAction`: Метод для создания кнопок.
-- `Textfield`: Метод для создания текстовых полей.
-- `Label`: Метод для создания меток.
-- `Tableview`: Метод для создания таблиц.
-- `StackView`: Метод для создания контейнеров.
-- `Image`: Метод для создания изображений.
-- `SwipeClass`: Класс для обработки жестов свайпа.
-- 'DateAndWeekDayFormatter': класс для настройки даты. 
+1. **UI Element Creation**: Methods for creating various UI elements including buttons, text fields, labels, tables, containers, and images.
+2. **Style Configuration**: Ability to customize styles for each element through style dictionaries.
+3. **Swipe Gesture Handling**: A class for managing swipe gestures with support for left and right swipes.
 
-## Пример использования
-Пример использования ElementBuilder для создания простого пользовательского интерфейса:
+## Advantages
 
-```swift
-import UIKit
-import ElementBuilder
+- **Ease of Use**: Simple interface for creating and configuring UI elements.
+- **Code Reduction**: Decreases the amount of code required for creating and setting up UI elements.
+- **Flexibility**: Easily customize styles and properties using style dictionaries.
+- **Extensibility**: Allows adding new methods and extending the framework’s functionality.
 
+## Main Methods and Classes
 
-class ViewController: UIViewController {
-    
-let myButton = ButtonsWithAction.button(text: "Click Me", action: {
-print("Button clicked!")
-}, style: ["color": UIColor.blue, "fontSize": 14])
+### `Button`
+#### Description
+Creates an interactive button for the user interface.
 
-let myTextField = ElementBuilder.textfield(placeholder: "Enter your name", text: "", style: ["borderColor": UIColor.black, "padding": 5])
-
-let myLabel = ElementBuilder.label(text: "Username:", style: ["fontWeight": UIFont.Weight.bold, "fontSize": 12])
-
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-}
-```
-
-## Заключение
-Фреймворк ElementBuilder предоставляет разработчикам мощные и удобные инструменты для создания и управления элементами пользовательского интерфейса в приложениях на основе UIKit. Он позволяет сократить количество кода, необходимого для разработки UI, и делает процесс создания интерфейсов более интуитивно понятным и гибким.
-
-
-Конечно! Вот подробная документация для вашего фреймворка `ElementBuilder`, который включает методы для создания различных элементов пользовательского интерфейса в UIKit на языке Swift.
-
-
-# Документация ElementBuilder
-
-## Оглавление
-1. [Button](#button)
-2. [TextField](#textfield)
-3. [Label](#label)
-4. [TableView](#tableview)
-5. [StackView](#stackview)
-6. [ImageView](#imageview)
-7. [SwipeClass](#swipeclass)
-
-<a name="button"></a>
-## Button
-### Описание
-Метод `button` используется для создания интерактивной кнопки в пользовательском интерфейсе.
-
-### Сигнатура
+#### Signature
 ```swift
 func button(text: String, action: @escaping () -> Void, style: [String: Any]? = nil) -> UIButton
 ```
 
-### Аргументы
-- `text` (String): Текст, отображаемый на кнопке.
-- `action` (@escaping () -> Void): Замыкание, вызываемое при нажатии на кнопку.
-- `style` ([String: Any]?): Словарь со стилями для кнопки (например, цвет, шрифт, размер).
+#### Parameters
+- `text` (String): The text displayed on the button.
+- `action` (@escaping () -> Void): Closure executed when the button is tapped.
+- `style` ([String: Any]?): Dictionary of styles for the button (e.g., color, font size).
 
-### Пример использования
+#### Example
 ```swift
 let myButton = ElementBuilder.button(text: "Click Me", action: {
     print("Button clicked!")
 }, style: ["color": UIColor.blue, "fontSize": 14])
 ```
 
-<a name="textfield"></a>
-## TextField
-### Описание
-Метод `textfield` используется для создания поля ввода текста.
+### `TextField`
+#### Description
+Creates a text input field.
 
-### Сигнатура
+#### Signature
 ```swift
 func textfield(placeholder: String, text: String = "", style: [String: Any]? = nil) -> UITextField
 ```
 
-### Аргументы
-- `placeholder` (String): Текст-заполнитель, отображаемый в пустом поле ввода.
-- `text` (String): Начальный текст в поле ввода.
-- `style` ([String: Any]?): Словарь со стилями для текстового поля.
+#### Parameters
+- `placeholder` (String): Placeholder text displayed when the field is empty.
+- `text` (String): Initial text in the field.
+- `style` ([String: Any]?): Dictionary of styles for the text field.
 
-### Пример использования
+#### Example
 ```swift
 let myTextField = ElementBuilder.textfield(placeholder: "Enter your name", text: "", style: ["borderColor": UIColor.black, "padding": 5])
 ```
 
-<a name="label"></a>
-## Label
-### Описание
-Метод `label` используется для создания текстовой метки.
+### `Label`
+#### Description
+Creates a text label.
 
-### Сигнатура
+#### Signature
 ```swift
 func label(text: String, style: [String: Any]? = nil) -> UILabel
 ```
 
-### Аргументы
-- `text` (String): Текст, отображаемый на метке.
-- `style` ([String: Any]?): Словарь со стилями для метки.
+#### Parameters
+- `text` (String): The text displayed on the label.
+- `style` ([String: Any]?): Dictionary of styles for the label.
 
-### Пример использования
+#### Example
 ```swift
 let myLabel = ElementBuilder.label(text: "Username:", style: ["fontWeight": UIFont.Weight.bold, "fontSize": 12])
 ```
 
-<a name="tableview"></a>
-## TableView
-### Описание
-Метод `tableview` используется для создания таблицы с данными.
+### `TableView`
+#### Description
+Creates a table view to display data.
 
-### Сигнатура
+#### Signature
 ```swift
 func tableview(data: [[Any]], headers: [String], style: [String: Any]? = nil) -> UITableView
 ```
 
-### Аргументы
-- `data` ([[Any]]): Двумерный массив данных для отображения в таблице.
-- `headers` ([String]): Массив заголовков колонок.
-- `style` ([String: Any]?): Словарь со стилями для таблицы.
+#### Parameters
+- `data` ([[Any]]): 2D array of data to display in the table.
+- `headers` ([String]): Array of column headers.
+- `style` ([String: Any]?): Dictionary of styles for the table view.
 
-### Пример использования
+#### Example
 ```swift
 let data = [
     ["John", "Doe", 28],
@@ -161,52 +106,49 @@ let headers = ["First Name", "Last Name", "Age"]
 let myTableView = ElementBuilder.tableview(data: data, headers: headers, style: ["borderColor": UIColor.black, "padding": 10])
 ```
 
-<a name="stackview"></a>
-## StackView
-### Описание
-Метод `stackview` используется для создания контейнера, который упорядочивает дочерние элементы вертикально или горизонтально.
+### `StackView`
+#### Description
+Creates a container view that arranges its child elements vertically or horizontally.
 
-### Сигнатура
+#### Signature
 ```swift
 func stackview(orientation: NSLayoutConstraint.Axis, children: [UIView], style: [String: Any]? = nil) -> UIStackView
 ```
 
-### Аргументы
-- `orientation` (NSLayoutConstraint.Axis): Ориентация контейнера (`.vertical` или `.horizontal`).
-- `children` ([UIView]): Массив дочерних элементов.
-- `style` ([String: Any]?): Словарь со стилями для контейнера.
+#### Parameters
+- `orientation` (NSLayoutConstraint.Axis): Orientation of the stack view (`.vertical` or `.horizontal`).
+- `children` ([UIView]): Array of child views.
+- `style` ([String: Any]?): Dictionary of styles for the stack view.
 
-### Пример использования
+#### Example
 ```swift
 let myStackView = ElementBuilder.stackview(orientation: .vertical, children: [myLabel, myTextField, myButton], style: ["spacing": 10])
 ```
 
-<a name="imageview"></a>
-## ImageView
-### Описание
-Метод `imageview` используется для отображения изображения.
+### `ImageView`
+#### Description
+Creates an image view for displaying images.
 
-### Сигнатура
+#### Signature
 ```swift
 func imageview(source: String, altText: String = "", style: [String: Any]? = nil) -> UIImageView
 ```
 
-### Аргументы
-- `source` (String): URL или путь к изображению.
-- `altText` (String): Альтернативный текст для изображения.
-- `style` ([String: Any]?): Словарь со стилями для изображения.
+#### Parameters
+- `source` (String): URL or path to the image.
+- `altText` (String): Alternative text for the image.
+- `style` ([String: Any]?): Dictionary of styles for the image view.
 
-### Пример использования
+#### Example
 ```swift
 let myImageView = ElementBuilder.imageview(source: "path/to/image.jpg", altText: "Sample Image", style: ["width": 100, "height": 100])
 ```
 
-<a name="swipeclass"></a>
-## SwipeClass
-### Описание
-Класс `SwipeClass` используется для обработки жестов свайпа.
+### `SwipeClass`
+#### Description
+Handles swipe gestures.
 
-### Сигнатура
+#### Signature
 ```swift
 class SwipeClass {
     var onSwipeLeft: () -> Void
@@ -217,15 +159,15 @@ class SwipeClass {
 }
 ```
 
-### Аргументы
-- `onSwipeLeft` (@escaping () -> Void): Замыкание, вызываемое при свайпе влево.
-- `onSwipeRight` (@escaping () -> Void): Замыкание, вызываемое при свайпе вправо.
+#### Parameters
+- `onSwipeLeft` (@escaping () -> Void): Closure called on a left swipe.
+- `onSwipeRight` (@escaping () -> Void): Closure called on a right swipe.
 
-### Методы
-#### `detectSwipe`
-Метод `detectSwipe` используется для обработки события касания и определения жеста свайпа.
+#### Methods
+##### `detectSwipe`
+Handles touch events to detect swipe gestures.
 
-### Пример использования
+#### Example
 ```swift
 let swipeHandler = SwipeClass(onSwipeLeft: {
     print("Swiped left!")
@@ -233,8 +175,11 @@ let swipeHandler = SwipeClass(onSwipeLeft: {
     print("Swiped right!")
 })
 
-// Вызов метода для обработки события касания
+// Call the method to handle touch events
 swipeHandler.detectSwipe(touchEvent: touchEvent)
 ```
 
-Эта документация охватывает основные методы и классы вашего фреймворка ElementBuilder. Вы можете дополнить её более подробными описаниями, примерами использования и информацией о возможных исключениях и ошибках.
+## Conclusion
+The **ElementBuilder** framework offers developers powerful and convenient tools for creating and managing UI elements in UIKit-based applications. It reduces the amount of code needed for UI development and makes the process of building interfaces more intuitive and flexible.
+
+
