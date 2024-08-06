@@ -42,41 +42,7 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
    ```swift
    import ElementBuilder
    ```
-
-### Using CocoaPods
-
-1. **Install CocoaPods** (if you haven’t already):
-   ```bash
-   sudo gem install cocoapods
-   ```
-
-2. **Create a Podfile**:
-   Navigate to your project directory and create a Podfile:
-   ```bash
-   pod init
-   ```
-
-3. **Edit the Podfile**:
-   Open the Podfile and add the following line:
-   ```ruby
-   pod 'ElementBuilder', :git => 'https://github.com/Oldbobb1/ElementBuilder.git'
-   ```
-
-4. **Install the Pod**:
-   Run the following command to install the pod:
-   ```bash
-   pod install
-   ```
-
-5. **Open the .xcworkspace**:
-   After installation, always open the project using the `.xcworkspace` file.
-
-6. **Import the Library**:
-   In the files where you want to use ElementBuilder, import it by adding:
-   ```swift
-   import ElementBuilder
-   ```
-
+   
 ## Main Methods and Classes
 
 ### `Button`
