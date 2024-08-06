@@ -4,6 +4,9 @@
 
 The **ElementBuilder** framework is designed to simplify the creation and management of user interface elements in UIKit-based iOS applications using Swift. It offers a set of methods to create and configure various UI components such as buttons, text fields, labels, tables, containers, and images. Additionally, it includes a class for handling swipe gestures.
 
+![App Demo](<img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718">)
+
+
 ## Purpose
 
 The goal of **ElementBuilder** is to provide a simple and intuitive interface for developing UI components, reducing the amount of code needed and making the process of creating user interfaces more straightforward and flexible.
