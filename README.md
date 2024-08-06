@@ -23,6 +23,12 @@ The goal of **ElementBuilder** is to provide a simple and intuitive interface fo
 - **Code Reduction**: Decreases the amount of code required for creating and setting up UI elements.
 - **Flexibility**: Easily customize styles and properties using style dictionaries.
 - **Extensibility**: Allows adding new methods and extending the framework’s functionality.
+  
+## Installation
+
+Clone the repository: git clone https://github.com/Oldbobb1/ElementBuilder.git
+Open the project in Xcode.
+Build and run the app on the iOS simulator or a physical device.
 
 ## Main Methods and Classes
 
