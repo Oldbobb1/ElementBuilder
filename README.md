@@ -25,10 +25,57 @@ The goal of **ElementBuilder** is to provide a simple and intuitive interface fo
 - **Extensibility**: Allows adding new methods and extending the framework’s functionality.
   
 ## Installation
+To add the ElementBuilder library to your Xcode project, follow these steps:
 
-Clone the repository: git clone https://github.com/Oldbobb1/ElementBuilder.git
-Open the project in Xcode.
-Build and run the app on the iOS simulator or a physical device.
+### Using Swift Package Manager
+
+1. **Open Xcode**:
+   Open your project in Xcode.
+
+2. **Add Package Dependency**:
+   - Go to `File` > `Add Packages...`.
+   - In the search bar, enter the following URL: `https://github.com/Oldbobb1/ElementBuilder`.
+   - Select the ElementBuilder repository when it appears and click `Add Package`.
+
+3. **Import the Library**:
+   In the files where you want to use ElementBuilder, import it by adding:
+   ```swift
+   import ElementBuilder
+   ```
+
+### Using CocoaPods
+
+1. **Install CocoaPods** (if you haven’t already):
+   ```bash
+   sudo gem install cocoapods
+   ```
+
+2. **Create a Podfile**:
+   Navigate to your project directory and create a Podfile:
+   ```bash
+   pod init
+   ```
+
+3. **Edit the Podfile**:
+   Open the Podfile and add the following line:
+   ```ruby
+   pod 'ElementBuilder', :git => 'https://github.com/Oldbobb1/ElementBuilder.git'
+   ```
+
+4. **Install the Pod**:
+   Run the following command to install the pod:
+   ```bash
+   pod install
+   ```
+
+5. **Open the .xcworkspace**:
+   After installation, always open the project using the `.xcworkspace` file.
+
+6. **Import the Library**:
+   In the files where you want to use ElementBuilder, import it by adding:
+   ```swift
+   import ElementBuilder
+   ```
 
 ## Main Methods and Classes
 
