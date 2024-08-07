@@ -6,6 +6,10 @@ The **ElementBuilder** framework is designed to simplify the creation and manage
 
 <img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718">
 
+## Сontent 
+* [ButtonsWithAction](#ButtonsWithAction)
+
+
 
 ## Purpose
 
@@ -45,7 +49,7 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
    
 ## Main Methods and Classes
 
-### `Button`
+### `ButtonsWithAction`
 #### Description
 Creates an interactive button for the user interface.
 
