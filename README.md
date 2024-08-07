@@ -2,7 +2,7 @@
 
 ## Introduction
 
-<!--The **ElementBuilder** framework is designed to simplify the creation and management of user interface elements in UIKit-based iOS applications using Swift. It offers a set of methods to create and configure various UI components such as buttons, text fields, labels, tables, containers, and images. Additionally, it includes a class for handling swipe gestures.-->
+The **ElementBuilder** framework is designed to simplify the creation and management of user interface elements in UIKit-based iOS applications using Swift. It offers a set of methods to create and configure various UI components such as buttons, text fields, labels, tables, containers, and images. Additionally, it includes a class for handling swipe gestures.
 
 <img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718">
 
@@ -72,7 +72,7 @@ public static func makeButton(
 ) -> UIButton
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`setTitle: String?`**
   - **Description**: The text to display on the button. If `nil`, the button will not have any title.
@@ -136,7 +136,7 @@ public static func makeButton(
 
 - **`shadowRadius: CGFloat?`**
   - **Description**: The blur radius of the button's shadow. A larger value creates a more blurred shadow. If `nil`, the button will use the default shadow radius.
-  - **Type**: `CGFloat?`
+  - **Type**: `CGFloat?`-->
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ let customButton = ButtonsWithAction.makeButton(
     shadowRadius: 4
 )
 ```
-In this example, a button is created with a title, rounded corners, centered content, custom title color and font, background color, system image, custom image, reduced opacity, and shadow settings.
+<!--In this example, a button is created with a title, rounded corners, centered content, custom title color and font, background color, system image, custom image, reduced opacity, and shadow settings.-->
 
 ### `TextField`
 #### Description
@@ -177,7 +177,7 @@ public static func textField(
 ) -> UITextField
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`placeholder: String`**
   - **Description**: The placeholder text that is displayed in the text field when it is empty. This text is typically used to give users a hint about what to enter in the text field.
@@ -197,7 +197,7 @@ public static func textField(
 
 - **`clipsToBounds: Bool?`**
   - **Description**: A Boolean value that determines whether the text field's subviews are clipped to its bounds. If `true`, any subviews extending beyond the text field's frame will be clipped. If `false`, subviews can extend beyond the text field's bounds. If `nil`, the default value is used.
-  - **Type**: `Bool?`
+  - **Type**: `Bool?`-->
 
 ### Example Usage
 
@@ -213,12 +213,12 @@ let customTextField = TextField.textField(
 )
 ```
 
-In this example, a `UITextField` is created with the following customizations:
+<!--In this example, a `UITextField` is created with the following customizations:
 - **Placeholder**: "Enter your name" is displayed when the text field is empty.
 - **Corner Radius**: The corners of the text field are rounded with a radius of 8 points.
 - **Font**: The text field uses a system font with a size of 14 points.
 - **Background Color**: The text field has a light gray background color.
-- **Clips to Bounds**: The text field’s subviews are clipped to its bounds.
+- **Clips to Bounds**: The text field’s subviews are clipped to its bounds.-->
 
 ### `Label`
 #### Description
@@ -239,7 +239,7 @@ public static func label(
 ) -> UILabel
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`text: String`**
   - **Description**: The text to be displayed in the label. This is the primary content of the label.
@@ -275,7 +275,7 @@ public static func label(
 
 - **`cornerRadius: CGFloat?`**
   - **Description**: The radius of the label’s corners. This parameter allows you to round the corners of the label. If `nil`, the label will have square corners.
-  - **Type**: `CGFloat?`
+  - **Type**: `CGFloat?`-->
 
 ### Example Usage
 
@@ -295,7 +295,7 @@ let customLabel = Label.label(
 )
 ```
 
-In this example:
+<!--In this example:
 - **Text**: "Welcome" is displayed in the label.
 - **Font Size**: The text uses a font size of 18 points.
 - **Weight**: The text is bold.
@@ -304,7 +304,7 @@ In this example:
 - **Number of Lines**: The label is allowed to display up to 2 lines of text.
 - **Background Color**: The label’s background color is yellow.
 - **Clips to Bounds**: The label’s subviews are clipped to its bounds.
-- **Corner Radius**: The label has rounded corners with a radius of 10 points.
+- **Corner Radius**: The label has rounded corners with a radius of 10 points.-->
 
 ### `StackView`
 #### Description
@@ -320,7 +320,7 @@ public static func stackView(
 ) -> UIStackView
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`axis: NSLayoutConstraint.Axis`**
   - **Description**: The axis along which the stack view arranges its arranged subviews. This parameter determines whether the stack view arranges its subviews in a horizontal or vertical line.
@@ -345,7 +345,7 @@ public static func stackView(
 
 - **`cornerRadius: CGFloat?`**
   - **Description**: The radius of the stack view’s corners. This parameter allows you to round the corners of the stack view. If `nil`, the stack view will have square corners.
-  - **Type**: `CGFloat?`
+  - **Type**: `CGFloat?`-->
 
 ### Example Usage
 
@@ -360,11 +360,11 @@ let customStackView = StackView.stackView(
 )
 ```
 
-In this example:
+<!--In this example:
 - **Axis**: The stack view arranges its subviews vertically.
 - **Distribution**: The subviews are spaced evenly along the stack view’s vertical axis, with equal space between each subview.
 - **Background Color**: The stack view’s background color is light gray.
-- **Corner Radius**: The stack view has rounded corners with a radius of 8 points.
+- **Corner Radius**: The stack view has rounded corners with a radius of 8 points.-->
 
 ### `ImageView`
 #### Description
@@ -380,7 +380,7 @@ public static func image(
 ) -> UIImageView
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`named: String`**
   - **Description**: The name of the image file to be loaded. This is the name of the image resource (without the file extension) that will be used to create the `UIImageView`. The image should be included in your app's asset catalog.
@@ -405,7 +405,7 @@ public static func image(
 
 - **`clipsToBounds: Bool?`**
   - **Description**: A Boolean value that determines whether the image view's subviews are clipped to its bounds. If `true`, any subviews extending beyond the image view’s frame will be clipped. If `false`, subviews can extend beyond the image view’s bounds. If `nil`, the default value is used.
-  - **Type**: `Bool?`
+  - **Type**: `Bool?`-->
 
 ### Example Usage
 
@@ -420,11 +420,11 @@ let customImageView = Image.image(
 )
 ```
 
-In this example:
+<!--In this example:
 - **Image**: The image named "exampleImage" is loaded and displayed in the `UIImageView`.
 - **Corner Radius**: The image view has rounded corners with a radius of 10 points.
 - **Content Mode**: The image is scaled to fill the bounds of the image view while maintaining its aspect ratio. Some parts of the image may be clipped to fit the view.
-- **Clips to Bounds**: The image view’s subviews are clipped to its bounds.
+- **Clips to Bounds**: The image view’s subviews are clipped to its bounds.-->
 
 ### `SwipeClass`
 #### Description
@@ -495,10 +495,10 @@ class MyViewController: UIViewController {
 }
 ```
 
-In this example:
+<!--In this example:
 - A `SwipeClass` instance is created with the current view controller (`self`) and closures for handling left and right swipe actions.
 - The `leftAction` closure prints a message and performs an action when a left swipe is detected.
-- The `rightAction` closure prints a message and performs an action when a right swipe is detected.
+- The `rightAction` closure prints a message and performs an action when a right swipe is detected.-->
 
 
 ###DateAndWeekDayFormatter
@@ -595,7 +595,7 @@ public static func datePicker(
 ) -> UIDatePicker
 ```
 
-### Parameters Description
+<!--### Parameters Description
 
 - **`datePickerMode: UIDatePicker.Mode?`**
   - **Description**: Specifies the mode of the `UIDatePicker`, which determines the type of date and time information the picker will allow the user to select. The possible values are:
@@ -645,7 +645,7 @@ public static func datePicker(
 
 - **`shadowRadius: CGFloat?`**
   - **Description**: Defines the blur radius of the shadow. A larger value results in a more diffuse shadow. If `nil`, the default shadow radius will be used.
-  - **Type**: `CGFloat?`
+  - **Type**: `CGFloat?`-->
 
 ### Example Usage
 
@@ -666,7 +666,7 @@ let customDatePicker = DatePicker.datePicker(
 )
 ```
 
-In this example:
+<!--In this example:
 - **Date Picker Mode**: The date picker is configured to allow both date and time selection.
 - **Preferred Style**: The date picker displays as a traditional wheel.
 - **Corner Radius**: The date picker has rounded corners with a radius of 10 points.
@@ -676,7 +676,7 @@ In this example:
 - **Shadow Color**: The shadow color is set to black.
 - **Shadow Offset**: The shadow is offset by 2 points downward.
 - **Shadow Opacity**: The shadow has 50% opacity.
-- **Shadow Radius**: The shadow has a blur radius of 4 points.
+- **Shadow Radius**: The shadow has a blur radius of 4 points.-->
 
 
 ## Conclusion
