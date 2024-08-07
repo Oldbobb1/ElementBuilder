@@ -501,8 +501,8 @@ class MyViewController: UIViewController {
 - The `rightAction` closure prints a message and performs an action when a right swipe is detected.-->
 
 
-###DateAndWeekDayFormatter
-### Description
+### `DateAndWeekDayFormatter`
+#### Description
 The `DateAndWeekDayFormatter` class is designed to format and display the day of the week and the day of the month for a given date. It utilizes `DateFormatter` to format the day of the week and `Calendar` to extract the day of the month. The formatted information is then displayed in a `UILabel`, which is added to a `UIStackView`.
 
 ### Properties
@@ -575,8 +575,8 @@ class MyViewController: UIViewController {
 
 This setup provides a clear and formatted display of dates, making it useful for calendar views, schedules, or any UI requiring date information.
 
-###DatePicker
-###Description
+### `DatePicker`
+#### Description
  Creates and configures a UIDatePicker with customizable properties including mode, style, appearance, and shadow effects.
  
 #### Signature
