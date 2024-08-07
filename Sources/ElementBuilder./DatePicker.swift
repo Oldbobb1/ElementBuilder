@@ -3,7 +3,6 @@ import UIKit
 
 public class DatePicker {
     public static func datePicker(datePickerMode: UIDatePicker.Mode? = nil, preferredDatePickerStyle: UIDatePickerStyle? = nil, cornerRadius: CGFloat? = nil, masksToBounds: Bool? = nil, backgroundColor: UIColor? = nil, clipsToBounds: Bool? = nil, shadowColor: CGColor? = nil, shadowOffset: CGSize? = nil, shadowOpacity: Float? = nil, shadowRadius: CGFloat? = nil) -> UIDatePicker {
-        
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = datePickerMode ?? .time
         datePicker.preferredDatePickerStyle = preferredDatePickerStyle ?? .wheels
