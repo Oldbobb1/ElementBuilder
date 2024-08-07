@@ -8,7 +8,13 @@ The **ElementBuilder** framework is designed to simplify the creation and manage
 
 ## Сontent 
 * [ButtonsWithAction](#ButtonsWithAction)
-
+* [TextField](#TextField)
+* [Label](#Label)
+* [StackView](#StackView)
+* [ImageView](#ImageView)
+* [SwipeClass](#SwipeClass)
+* [DateAndWeekDayFormatter](#DateAndWeekDayFormatter)
+* [DatePicker](#DatePicker)
 
 
 ## Purpose
