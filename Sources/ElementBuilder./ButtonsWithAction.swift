@@ -20,16 +20,6 @@ public class ButtonsWithAction {
     button.layer.shadowRadius = shadowRadius ?? 0 
     button.translatesAutoresizingMaskIntoConstraints = false
         
-        var config = configuration ?? UIButton.Configuration.plain()
-//        config.title = setTitle
-//        config.baseForegroundColor = setTitleColor
-//        config.background.backgroundColor = backgroundColor
-//        config.cornerStyle = cornerRadius != nil ? .medium : .none
-        
-        // Устанавливаем отступ между текстом и изображением
-        config.imagePadding = imagePadding ?? 10
-    
-    
     if let systemName = systemName {
         let image = setImage ?? UIImage(systemName: systemName)
         if let image = image {
