@@ -32,4 +32,5 @@ public class SwipeClass {
     @objc public func swipeRight() {
         rightAction?()
     }
+    
 }
