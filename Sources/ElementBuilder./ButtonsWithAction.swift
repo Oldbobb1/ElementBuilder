@@ -21,7 +21,7 @@ public class ButtonsWithAction {
         shadowOpacity: Float? = nil,
         shadowRadius: CGFloat? = nil,
         imagePadding: CGFloat? = nil,
-        tag: Int,
+        tag: Int?,
         tintColor: UIColor? = nil
     ) -> UIButton {
         
@@ -35,7 +35,7 @@ public class ButtonsWithAction {
         button.titleLabel?.font = font
         button.configuration = configuration
         button.backgroundColor = backgroundColor ?? .systemBackground
-        button.tag = tag
+        button.tag = tag ?? .zero
         button.tintColor = tintColor
         button.layer.shadowColor = shadowColor
         button.layer.shadowOffset = shadowOffset ?? .zero

@@ -8,7 +8,7 @@ public class StackView {
         distribution: UIStackView.Distribution? = nil,
         backgroundColor: UIColor? = nil,
         cornerRadius: CGFloat? = nil,
-        spacing: CGFloat,
+        spacing: CGFloat? = nil,
         layoutMargins: UIEdgeInsets? = nil
     ) -> UIStackView {
             
@@ -18,7 +18,7 @@ public class StackView {
         stackView.distribution = distribution ?? .fillEqually
         stackView.backgroundColor = backgroundColor
         stackView.layer.cornerRadius = cornerRadius ?? 0
-        stackView.spacing = spacing
+        stackView.spacing = spacing ?? .zero
         stackView.layoutMargins = layoutMargins ?? .zero
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
