@@ -20,13 +20,9 @@ public class StackView {
         stackView.layer.cornerRadius = cornerRadius ?? 0
         stackView.spacing = spacing ?? .zero
         stackView.layoutMargins = layoutMargins ?? .zero
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.isLayoutMarginsRelativeArrangement = true
-       
-        
         return stackView
     }
-    
 }
 
 

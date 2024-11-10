@@ -31,7 +31,6 @@ public class TextField {
         textField.layer.shadowOffset = shadowOffset ?? .zero
         textField.layer.shadowOpacity = shadowOpacity ?? 0
         textField.layer.shadowRadius =  shadowRadius ?? 0
-        
         return textField
     }
     
