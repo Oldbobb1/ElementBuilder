@@ -11,9 +11,8 @@ public class StackView {
         spacing: CGFloat? = nil,
         layoutMargins: UIEdgeInsets? = nil
     ) -> UIStackView {
-            
-        let stackView = UIStackView()
         
+        let stackView = UIStackView()
         stackView.axis = axis
         stackView.distribution = distribution ?? .fillEqually
         stackView.backgroundColor = backgroundColor

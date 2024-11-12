@@ -2,7 +2,7 @@ import UIKit
 
 
 public class Gradient {
-   
+    
    public static func gradientLayers(
       oneColor:UIColor, 
       twoColor: UIColor,
@@ -18,5 +18,6 @@ public class Gradient {
       gradient.endPoint = CGPoint(x: 1, y: 1)
       return gradient
    }
-   
 }
+
+

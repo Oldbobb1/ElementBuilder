@@ -17,7 +17,6 @@ public class DatePicker {
     ) -> UIDatePicker {
         
         let datePicker = UIDatePicker()
-        
         datePicker.datePickerMode = datePickerMode ?? .time
         datePicker.preferredDatePickerStyle = preferredDatePickerStyle ?? .wheels
         datePicker.layer.cornerRadius = cornerRadius ?? 0
@@ -28,9 +27,7 @@ public class DatePicker {
         datePicker.layer.shadowOffset = CGSize(width: 0, height: 0)
         datePicker.layer.shadowOpacity = shadowOpacity ?? 0
         datePicker.layer.shadowRadius = shadowRadius ?? 0
-        
         return datePicker
     }
-    
 }
 

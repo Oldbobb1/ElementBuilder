@@ -3,12 +3,12 @@ import UIKit
 
 public class SwipeClass {
     
-   public typealias SwipeAction = () -> Void
+    public typealias SwipeAction = () -> Void
     
     weak var viewController: UIViewController?
     var leftAction: SwipeAction?, rightAction: SwipeAction?
     
-  public init(viewController:UIViewController,leftAction: @escaping SwipeAction ,rightAction: @escaping SwipeAction ) {
+    public init(viewController:UIViewController,leftAction: @escaping SwipeAction ,rightAction: @escaping SwipeAction ) {
         self.viewController = viewController
         self.leftAction = leftAction
         self.rightAction = rightAction
@@ -32,5 +32,4 @@ public class SwipeClass {
     @objc public func swipeRight() {
         rightAction?()
     }
-    
 }

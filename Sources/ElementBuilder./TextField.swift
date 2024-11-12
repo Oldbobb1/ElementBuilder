@@ -17,7 +17,6 @@ public class TextField {
     ) -> UITextField {
         
         let textField = UITextField()
-        
         textField.placeholder = placeholder
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,attributes: [NSAttributedString.Key.foregroundColor: UIColor.label] )
         textField.borderStyle = .roundedRect
@@ -33,5 +32,4 @@ public class TextField {
         textField.layer.shadowRadius =  shadowRadius ?? 0
         return textField
     }
-    
 }

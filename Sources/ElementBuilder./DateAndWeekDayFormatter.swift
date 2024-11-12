@@ -5,10 +5,9 @@ public class DateAndWeekDayFormatter {
     
     public init(){}
     
-   public func dateCurrent(to stackView: UIStackView, withDay day: Date) {
-       
+    public func dateCurrent(to stackView: UIStackView, withDay day: Date) {
+        
         let dateFormatter = DateFormatter()
-       
         dateFormatter.dateFormat = "EE"
         let calendar = Calendar.current
         let dayOfWeek = dateFormatter.string(from: day)
@@ -17,11 +16,11 @@ public class DateAndWeekDayFormatter {
         dayOfWeekLabel.text = "\(dayOfWeek)\n  \(dayOfMonth)"
         dayOfWeekLabel.numberOfLines = 0
         dayOfWeekLabel.font = UIFont.systemFont(ofSize: 13)
-       
+        
         stackView.addArrangedSubview(dayOfWeekLabel)
     }
-    
 }
+
 //MARK: - использование в модели или непоследственно в классе (в классе вызов во viewDidload).
 
 //func calendar() {

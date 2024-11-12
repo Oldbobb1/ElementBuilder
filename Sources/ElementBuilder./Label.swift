@@ -16,7 +16,6 @@ public class Label {
     ) -> UILabel {
         
         let label = UILabel()
-        
         label.text = text
         label.textColor = textColor
         label.textAlignment = textAlignment ?? .natural
@@ -25,9 +24,7 @@ public class Label {
         label.backgroundColor = backgroundColor
         label.clipsToBounds = clipsToBounds ?? false
         label.layer.cornerRadius = cornerRadius ?? 0
-        
         return label
     }
-    
 }
 
