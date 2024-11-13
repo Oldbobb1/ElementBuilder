@@ -1,12 +1,13 @@
 import UIKit
 
-
 public class DateAndWeekDayFormatter {
     
     public init(){}
     
-    public func dateCurrent(to stackView: UIStackView, withDay day: Date) {
-        
+    public func dateCurrent(
+        to stackView: UIStackView,
+        withDay day: Date
+    ) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EE"
         let calendar = Calendar.current
