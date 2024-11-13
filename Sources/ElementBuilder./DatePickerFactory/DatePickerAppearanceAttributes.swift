@@ -7,7 +7,7 @@ public struct DatePickerAppearanceAttributes {
     var masksToBounds: Bool?
     var backgroundColor: UIColor?
     
-    init(
+    public init(
         datePickerMode: UIDatePicker.Mode? = nil,
         preferredDatePickerStyle: UIDatePickerStyle? = nil,
         cornerRadius: CGFloat? = nil,

@@ -8,7 +8,7 @@ public struct TextFieldAppearanceProperties {
     var  clipsToBounds: Bool?
     var contentMode: UIView.ContentMode?
     
-    init(
+    public init(
         placeholder: String? = nil,
         cornerRadius: CGFloat? = nil,
         font: UIFont? = nil,

@@ -5,7 +5,7 @@ public struct LabelStyleAttributes {
     var clipsToBounds: Bool?
     var cornerRadius: CGFloat?
     
-    init(
+    public init(
         backgroundColor: UIColor? = nil,
         clipsToBounds: Bool? = nil,
         cornerRadius: CGFloat? = nil

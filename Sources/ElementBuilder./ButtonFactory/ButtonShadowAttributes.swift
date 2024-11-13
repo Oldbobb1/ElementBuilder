@@ -6,7 +6,7 @@ public struct ButtonShadowAttributes {
     var shadowOpacity: Float?
     var shadowRadius: CGFloat?
     
-    init(
+    public init(
         shadowColor: CGColor? = nil,
         shadowOffset: CGSize? = nil,
         shadowOpacity: Float? = nil,

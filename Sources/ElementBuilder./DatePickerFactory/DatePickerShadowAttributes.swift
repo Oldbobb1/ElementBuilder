@@ -7,7 +7,7 @@ public struct DatePickerShadowAttributes {
     var shadowOpacity: Float?
     var shadowRadius: CGFloat?
     
-    init(
+    public init(
         clipsToBounds: Bool? = nil,
         shadowColor: CGColor? = nil,
         shadowOffset: CGSize? = nil,

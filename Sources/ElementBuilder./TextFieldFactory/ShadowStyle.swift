@@ -6,7 +6,7 @@ public struct ShadowStyle {
     var opacity: Float?
     var radius: CGFloat?
     
-    init(
+    public init(
         color: CGColor? = nil,
         offset: CGSize? = nil,
         opacity: Float? = nil,

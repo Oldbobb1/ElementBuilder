@@ -5,7 +5,7 @@ public struct StackViewStyle {
     var spacing: CGFloat?
     var layoutMargins: UIEdgeInsets?
     
-    init (
+    public init (
         cornerRadius: CGFloat? = nil,
         spacing: CGFloat? = nil,
         layoutMargins: UIEdgeInsets? = nil

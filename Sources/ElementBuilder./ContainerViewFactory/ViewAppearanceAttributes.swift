@@ -4,7 +4,7 @@ public struct ViewAppearanceAttributes {
     var backgroundColor: UIColor?
     var cornerRadius: CGFloat?
     
-    init (
+    public init (
         backgroundColor: UIColor? = nil,
         cornerRadius: CGFloat? = nil
     ) {

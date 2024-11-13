@@ -9,7 +9,7 @@ public struct ButtonImageAttributes {
     var width: Int?
     var height: Int?
     
-    init(
+    public init(
         systemName: String? = nil,
         setImage: UIImage? = nil,
         imageSize: CGSize? = nil,

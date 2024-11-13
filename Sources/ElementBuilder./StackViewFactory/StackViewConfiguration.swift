@@ -5,7 +5,7 @@ public struct StackViewConfiguration {
     var distribution: UIStackView.Distribution?
     var backgroundColor: UIColor?
     
-    init (
+    public init (
         axis: NSLayoutConstraint.Axis? = nil,
         distribution: UIStackView.Distribution? = nil,
         backgroundColor: UIColor? = nil

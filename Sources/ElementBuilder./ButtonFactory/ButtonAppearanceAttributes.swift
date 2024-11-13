@@ -11,7 +11,7 @@ public struct ButtonAppearanceAttributes {
     var backgroundColor: UIColor?
     var tag: Int?
     
-    init(
+    public init(
         setTitle: String? = nil,
         cornerRadius: CGFloat? = nil,
         contentHorizontalAlignment: UIControl.ContentHorizontalAlignment? = nil,

@@ -8,7 +8,7 @@ public struct LabelTextAttributes {
     var textAlignment: NSTextAlignment?
     var numberOfLines: Int?
     
-    init (
+    public init (
         text: String? = nil,
         fontSize: CGFloat? = nil,
         weight: UIFont.Weight? = nil,
