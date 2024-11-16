@@ -22,7 +22,7 @@
 
 ---
 
-## Сontent 
+## 📋 Сontent 
 * [ButtonFactory](#ButtonFactory)
 * [ContainerViewFactory](#ContainerViewFactory)
 * [DatePickerFactory](#DatePickerFactory)
@@ -121,7 +121,7 @@ class MyViewController: UIViewController {
 let gradient = GradientFactory. 
 ```
 
-###ImageViewFactory
+### ImageViewFactory
 ```swift
 let image = ImageViewFactory.makeImage()
 ```
