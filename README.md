@@ -7,12 +7,6 @@
   </h3>
 </div>
 
-<div id="header" align="center" style="background-color: #4facfe; /* Или другой цвет */ padding: 20px; border-radius: 12px; color: white;">
-  <h1 style="margin: 0; padding: 15px; font-size: 3.5rem;">ElementBuilder</h1>
-  <h3 style="margin: 10px 0 0; font-size: 1.2rem; color: white;">🛠️ Simplify UIKit Development</h3>
-</div>
-
-
 ## 🚀 About
 
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It offers factory structs to create reusable, customizable UI elements with minimal code. Additionally, it includes a struct for handling swipe gestures.
