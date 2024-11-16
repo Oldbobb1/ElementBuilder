@@ -11,8 +11,6 @@
 
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It offers factory structs to create reusable, customizable UI elements with minimal code. Additionally, it includes a struct for handling swipe gestures.
 
----
-
 ## ✨ Features
 - 🧩 **Modular UI Factories**: buttons, containerView, datePicker, label, stackView, textField, image. 
 - 🌈 **Gradient Layers**: Easily add gradient backgrounds to your views.
