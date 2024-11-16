@@ -100,7 +100,7 @@ let label = LabelFactory.makeLabel(
     textAttributes:
 )
 ```
-
+---
 ### StackViewFactory
 ---
 **Struct**
