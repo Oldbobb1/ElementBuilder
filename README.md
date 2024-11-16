@@ -102,6 +102,7 @@ let label = LabelFactory.makeLabel(
 ```
 
 ### StackViewFactory
+---
 **Struct**
 ```swift 
 public struct {}
