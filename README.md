@@ -60,51 +60,47 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
 ## 🛠️ Usage
 
 ### ButtonFactory
-```
+```swift
 let button = ButtonFactory.makeButton(
     appearanceAttributes: 
 )
 ```
-###ContainerViewFactory
-```
+### ContainerViewFactory
+```swift 
 let containers = ContainerFactory.
 ```
 
-###DatePickerFactory
-```
+### DatePickerFactory
+```swift 
 let datePicker = DatePickerFactory.
-
 ```
 
 ### LabelFactory 
-```
+```swift 
 let label = LabelFactory.makeLabel(
     textAttributes:
 )
 ```
 
-###StackViewFactory
-
-```
+### StackViewFactory
+```swift 
 let stack = StackViewFactory. 
 ```
 
-###TextFieldFactory
-
-```
+### TextFieldFactory
+```swift
 let textField = TextFieldFactory. 
 ```
 
-###DateAndWeekDayFormatter
-```
+### DateAndWeekDayFormatter
+```swift 
 import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-    
-    let stackView = UIStackView()
-
-        let dateFormatter = DateAndWeekDayFormatter()
+  
+  let stackView = UIStackView()
+  let dateFormatter = DateAndWeekDayFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,25 +117,22 @@ class MyViewController: UIViewController {
 ```
 
 ### GradientFactory
-```
+```swift 
 let gradient = GradientFactory. 
 ```
 
 ###ImageViewFactory
-
-``` 
-
+```swift
+let image = ImageViewFactory.makeImage()
 ```
 
-###SwipeGestureManager
-
-``` 
+### SwipeGestureManager
+```swift
 import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-    
-            let swipeHandler = SwipeGestureManager()
+  let swipeHandler = SwipeGestureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,13 +141,13 @@ class MyViewController: UIViewController {
     }
 
 func swipe() { 
-       let swipeHandler = SwipeGestureManager(
-            viewController: self,
-            leftAction: { },
-            rightAction: {[weak self] in
-            guard let self = self else {return}
-            self.dismiss(animated: true, completion: nil)
-            })
+  let swipeHandler = SwipeGestureManager(
+  viewController: self,
+  leftAction: { },
+  rightAction: {[weak self] in
+    guard let self = self else {return}
+    self.dismiss(animated: true, completion: nil)
+     })
 } 
 }
 ```
