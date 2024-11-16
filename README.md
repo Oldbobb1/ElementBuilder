@@ -30,8 +30,8 @@
 * [StackViewFactory](#StackViewFactory) 
 * [TextFieldFactory](#TextFieldFactory)
 * [DateAndWeekDayFormatter](#DateAndWeekDayFormatter)
-**[GradientFactory](#GradientFactory)
-* [ImageViewFactory](#ImageView Factory)
+* [GradientFactory](#GradientFactory)
+* [ImageViewFactory](#ImageViewFactory)
 * [SwipeGestureManager](#SwipeGestureManager) 
 
 ## Requirements
