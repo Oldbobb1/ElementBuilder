@@ -34,7 +34,7 @@
 * [ImageViewFactory](#ImageViewFactory)
 * [SwipeGestureManager](#SwipeGestureManager) 
 
-## Requirements
+## 👮‍♂️ Requirements
 
 * iOS 17+ 
 * Xcode 15+
