@@ -1,8 +1,8 @@
 <div id="header" align="center" style="background: linear-gradient(to right, #4facfe, #00f2fe); padding: 20px; border-radius: 12px;">
-<h1 style="margin: 0; padding: 15px; font-size: 3.5rem; color: white;">
+<h1 style="margin: 0; padding: 15px; font-size: 3.5rem;">
   ElementBuilder
 </h1>
-<h3 style="margin: 10px 0 0; font-size: 1.2rem; color: #000000;">
+<h3 style="margin: 10px 0 0; font-size: 1.2rem;">
   🛠️ Simplify UIKit Development
   </h3>
 </div>
