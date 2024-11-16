@@ -17,8 +17,6 @@
 - 🎛️ **Swipe Gesture Manager**: Simplify swipe gesture handling in your view controllers.
 - 📆 **Date Utilities**: Format and display dates in your UI seamlessly.
 
----
-
 ## 📋 Сontent 
 * [ButtonFactory](#ButtonFactory)
 * [ContainerViewFactory](#ContainerViewFactory)
