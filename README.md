@@ -1,5 +1,3 @@
-будет в файле 
-
 <div id="header" align="center" style="background: linear-gradient(to right, #4facfe, #00f2fe); padding: 20px; border-radius: 12px; color: white;">
   <h1 style="margin: 0; padding: 15px; font-size: 3.5rem;">
     ElementBuilder
