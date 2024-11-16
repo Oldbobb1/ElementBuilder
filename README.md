@@ -14,7 +14,6 @@
 ---
 
 ## ✨ Features
-
 - 🧩 **Modular UI Factories**: buttons, containerView, datePicker, label, stackView, textField, image. 
 - 🌈 **Gradient Layers**: Easily add gradient backgrounds to your views.
 - 🎛️ **Swipe Gesture Manager**: Simplify swipe gesture handling in your view controllers.
@@ -59,22 +58,43 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
 ## 🛠️ Usage
 
 ### ButtonFactory
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift
 let button = ButtonFactory.makeButton(
     appearanceAttributes: 
 )
 ```
+
 ### ContainerViewFactory
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift 
 let containers = ContainerFactory.
 ```
 
 ### DatePickerFactory
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift 
 let datePicker = DatePickerFactory.
 ```
 
 ### LabelFactory 
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift 
 let label = LabelFactory.makeLabel(
     textAttributes:
@@ -82,11 +102,21 @@ let label = LabelFactory.makeLabel(
 ```
 
 ### StackViewFactory
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift 
 let stack = StackViewFactory. 
 ```
 
 ### TextFieldFactory
+Struct 
+```swift 
+public struct {}
+```
+Init 
 ```swift
 let textField = TextFieldFactory. 
 ```
@@ -117,12 +147,25 @@ class MyViewController: UIViewController {
 
 ### GradientFactory
 ```swift 
-let gradient = GradientFactory. 
+let gradient = GradientFactory.makeGradientLayer(
+      startColor: .systemBlue
+      endColor: .systemIndigo
+)
 ```
 
 ### ImageViewFactory
-```swift
-let image = ImageViewFactory.makeImage()
+```swift 
+let yourImage = ImageViewFactory.makeImage(
+        “yourNameImage”
+        cornerRadius: 20
+        contentMode: . scaleAspectFit,
+clipsToBounds: true ) 
+
+let systemImage = ImageViewFactory.makeSystemImageViews(
+        systemName:”plus.circle”,
+        tintColor: .red, 
+        contentMode: . scaleAspectFit
+    )
 ```
 
 ### SwipeGestureManager
