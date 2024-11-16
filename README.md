@@ -58,11 +58,11 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
 ## 🛠️ Usage
 
 ### ButtonFactory
-Struct 
+**Struct**
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift
 let button = ButtonFactory.makeButton(
     appearanceAttributes: 
@@ -70,31 +70,31 @@ let button = ButtonFactory.makeButton(
 ```
 
 ### ContainerViewFactory
-Struct 
+**Struct** 
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift 
 let containers = ContainerFactory.
 ```
 
 ### DatePickerFactory
-Struct 
+**Struct** 
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift 
 let datePicker = DatePickerFactory.
 ```
 
 ### LabelFactory 
-Struct 
+**Struct**
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift 
 let label = LabelFactory.makeLabel(
     textAttributes:
@@ -102,21 +102,21 @@ let label = LabelFactory.makeLabel(
 ```
 
 ### StackViewFactory
-Struct 
+**Struct**
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift 
 let stack = StackViewFactory. 
 ```
 
 ### TextFieldFactory
-Struct 
+**Struct**
 ```swift 
 public struct {}
 ```
-Init 
+**Init**
 ```swift
 let textField = TextFieldFactory. 
 ```
