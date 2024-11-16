@@ -7,31 +7,6 @@
   </h3>
 </div>
 
-<style>
-.header {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  color: white;
-}
-
-.header h1 {
-  margin: 0;
-  padding: 15px;
-  font-size: 3.5rem;
-}
-
-.header h3 {
-  margin: 10px 0 0;
-  font-size: 1.2rem;
-}
-</style>
-
-<div class="header">
-  <h1>ElementBuilder</h1>
-  <h3>🛠️ Simplify UIKit Development</h3>
-</div>
 
 ## 🚀 About
 
