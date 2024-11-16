@@ -6,6 +6,7 @@
   🛠️ Simplify UIKit Development
   </h3>
 </div>
+<img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718"> 
 
 ## 🚀 About
 
