@@ -20,22 +20,23 @@ public class SwipeGestureManager {
         configureSwipeGestures()
     }
     
-    private func configureSwipeGestures() {
+    func configureSwipeGestures() {
         addSwipeGesture(direction: .left, action: #selector(handleSwipeLeft))
         addSwipeGesture(direction: .right, action: #selector(handleSwipeRight))
     }
     
-    private func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, action: Selector) {
+    func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, action: Selector) {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: action)
         swipeGesture.direction = direction
         viewController?.view.addGestureRecognizer(swipeGesture)
     }
     
-    @objc private func handleSwipeLeft() {
+    @objc func handleSwipeLeft() {
         leftAction()
     }
     
-    @objc private func handleSwipeRight() {
+    @objc func handleSwipeRight() {
         rightAction()
     }
 }
+

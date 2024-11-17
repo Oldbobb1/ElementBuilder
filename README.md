@@ -23,7 +23,6 @@
 * [SwipeGestureManager](#SwipeGestureManager) 
 
 ## 👮‍♂️ Requirements
-
 * iOS 17+ 
 * Xcode 15+
 * Swift 5.5+ 
@@ -39,10 +38,10 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
 <img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718">  ??добавить скриншот?? 
 
 3. **Import the Library**:
-   In the files where you want to use ElementBuilder, import it by adding:
-   ```swift
-   import ElementBuilder
-   ```
+In the files where you want to use ElementBuilder, import it by adding:
+```swift
+import ElementBuilder
+```
 
 ## 🛠️ Usage
 
@@ -54,7 +53,7 @@ public struct {}
 **Init**
 ```swift
 let button = ButtonFactory.makeButton(
-    appearanceAttributes: 
+appearanceAttributes: 
 )
 ```
 ---
@@ -86,7 +85,7 @@ public struct {}
 **Init**
 ```swift 
 let label = LabelFactory.makeLabel(
-    textAttributes:
+textAttributes:
 )
 ```
 ---
@@ -117,15 +116,14 @@ import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-  
-  let stackView = UIStackView()
-  let dateFormatter = DateAndWeekDayFormatter()
-
+    let stackView = UIStackView()
+    let dateFormatter = DateAndWeekDayFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         view.addSubview(stackView)
- 
+        
         let calendar = Calendar.current
         for i in 0..<3 {
             let date = calendar.date(byAdding: .day, value: i, to: Date())!
@@ -138,24 +136,24 @@ class MyViewController: UIViewController {
 ### GradientFactory
 ```swift 
 let gradient = GradientFactory.makeGradientLayer(
-      startColor: .systemBlue
-      endColor: .systemIndigo
+startColor: .systemBlue
+endColor: .systemIndigo
 )
 ```
 ---
 ### ImageViewFactory
 ```swift 
 let yourImage = ImageViewFactory.makeImage(
-        “yourNameImage”
-        cornerRadius: 20
-        contentMode: . scaleAspectFit,
+“yourNameImage”
+cornerRadius: 20
+contentMode: . scaleAspectFit,
 clipsToBounds: true ) 
 
 let systemImage = ImageViewFactory.makeSystemImageViews(
-        systemName:”plus.circle”,
-        tintColor: .red, 
-        contentMode: . scaleAspectFit
-    )
+systemName:”plus.circle”,
+tintColor: .red, 
+contentMode: . scaleAspectFit
+)
 ```
 ---
 ### SwipeGestureManager
@@ -164,26 +162,27 @@ import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-  
-  let swipeHandler = SwipeGestureManager()
+    
+    let swipeHandler = SwipeGestureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       swipe() 
+        swipe()
     }
-
-func swipe() { 
-  let swipeHandler = SwipeGestureManager(
-  viewController: self,
-  leftAction: { },
-  rightAction: {[weak self] in
-    guard let self = self else {return}
-    self.dismiss(animated: true, completion: nil)
-     })
-} 
+    
+    func swipe() {
+        let swipeHandler = SwipeGestureManager(
+            viewController: self,
+            leftAction: { },
+            rightAction: {[weak self] in
+                guard let self = self else {return}
+                self.dismiss(animated: true, completion: nil)
+            })
+    }
 }
 ```
 
 ## Conclusion
 **ElementBuilder** a framework offers developers powerful and convenient tools for creating and managing UI elements in UIKit-based applications. It reduces the amount of code needed for UI development and makes the process of building interfaces more intuitive and flexible.
+

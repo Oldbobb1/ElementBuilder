@@ -1,6 +1,6 @@
 import UIKit
 
-public class DateAndWeekDayFormatter {
+public struct DateAndWeekDayFormatter {
     
     public init(){}
     
