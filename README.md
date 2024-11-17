@@ -1,11 +1,4 @@
-<div id="header" align="center" style="background: linear-gradient(to right, #4facfe, #00f2fe); padding: 20px; border-radius: 12px; color: white">
-<h1 style="margin: 0; padding: 15px; font-size: 3.5rem;">
-  ElementBuilder
-</h1>
-<h3 style="margin: 10px 0 0; font-size: 1.2rem; color: #f0000">
-  🛠️ Simplify UIKit Development
-  </h3>
-</div>
+<img src="https://github.com/user-attachments/assets/31efbbc1-a6bb-4765-abdc-32300d9d0321" width="1300" height="180" alt="header">
 
 ## 🚀 About
 
@@ -194,9 +187,3 @@ func swipe() {
 
 ## Conclusion
 **ElementBuilder** a framework offers developers powerful and convenient tools for creating and managing UI elements in UIKit-based applications. It reduces the amount of code needed for UI development and makes the process of building interfaces more intuitive and flexible.
-
-
-
-
-
-
