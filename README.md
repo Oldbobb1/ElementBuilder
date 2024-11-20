@@ -115,7 +115,6 @@ textAttributes:
 ```
 ---
 ## StackViewFactory
-
 **Struct**
 ```swift 
 public struct {}
