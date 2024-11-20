@@ -59,7 +59,7 @@ let button = ButtonFactory.makeButton(
 appearanceAttributes: 
 )
 ```
----
+
 ## ContainerViewFactory
 **Struct** 
 ```swift 
@@ -80,7 +80,7 @@ public struct {}
         )
     )
 ```
----
+
 ## DatePickerFactory
 **Struct** 
 ```swift 
@@ -90,7 +90,7 @@ public struct {}
 ```swift 
 let datePicker = DatePickerFactory.
 ```
----
+
 ## LabelFactory 
 **Struct**
 ```swift 
@@ -113,7 +113,7 @@ public struct {}
 textAttributes:
 )
 ```
----
+
 ## StackViewFactory
 **Struct**
 ```swift 
@@ -134,7 +134,7 @@ public struct {}
         )
     )
 ```
----
+
 ### TextFieldFactory
 **Struct**
 ```swift 
@@ -152,7 +152,7 @@ public struct {}
                                                    )
     )
 ```
----
+
 ## DateAndWeekDayFormatter
 ```swift 
 import UIKit
@@ -191,7 +191,7 @@ class MyViewController: UIViewController {
     }
 }
 ```
----
+
 ## GradientFactory
 **Declaration and initialization of constants**
 ```swift 
@@ -200,7 +200,7 @@ let gradient = GradientFactory.makeGradientLayer(
     endColor: .systemIndigo
 )
 ```
----
+
 ## ImageViewFactory
 **Declaration and initialization of constants**
 ```swift 
@@ -219,7 +219,7 @@ let systemImage = ImageViewFactory.makeSystemImageViews(
     contentMode: . scaleAspectFit
 )
 ```
----
+
 ## SwipeGestureManager
 ```swift
 import UIKit
