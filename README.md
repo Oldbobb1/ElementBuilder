@@ -1,16 +1,15 @@
 <img src="https://github.com/user-attachments/assets/31efbbc1-a6bb-4765-abdc-32300d9d0321" width="1300" height="180" alt="header">
 
-## 🚀 About
-
+# 🚀 About
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It offers factory structs to create reusable, customizable UI elements with minimal code. Additionally, it includes a struct for handling swipe gestures.
 
-## ✨ Features
+# ✨ Features
 - 🧩 **Modular UI Factories**: buttons, containerView, datePicker, label, stackView, textField, image. 
 - 🌈 **Gradient Layers**: Easily add gradient backgrounds to your views.
 - 🎛️ **Swipe Gesture Manager**: Simplify swipe gesture handling in your view controllers.
 - 📆 **Date Utilities**: Format and display dates in your UI seamlessly.
 
-## 📋 Сontent 
+# 📋 Сontent 
 * [ButtonFactory](#ButtonFactory)
 * [ContainerViewFactory](#ContainerViewFactory)
 * [DatePickerFactory](#DatePickerFactory)
@@ -22,82 +21,119 @@
 * [ImageViewFactory](#ImageViewFactory)
 * [SwipeGestureManager](#SwipeGestureManager) 
 
-## 👮‍♂️ Requirements
+# 👮‍♂️ Requirements
 * iOS 17+ 
 * Xcode 15+
 * Swift 5.5+ 
 
-## 📦 Installation 
+# 📦 Installation 
 To add the ElementBuilder library to your Xcode project, follow these steps:
 
-### Using Swift Package Manager
+## Using Swift Package Manager
 
-1.  Описать путь перехода к spm 
+1. Open the Package Dependencies section in Xcode: select the “Package Dependencies” tab in the project settings.
+<img src="https://github.com/user-attachments/assets/98ad5ff8-4b32-4eff-a2c7-41c9480f96cb" width="800" height="350">
 
-2. **Add Package Dependency**:
-<img width="331" alt="Снимок экрана 2024-08-06 в 7 00 57 PM" src="https://github.com/user-attachments/assets/f76bae97-a4d4-4efa-af96-27262eaf6718">  ??добавить скриншот?? 
+2. Add a dependency on the Package Dependencies tab in Xcode: click the '+' button to add a new package.
+<img src="https://github.com/user-attachments/assets/3b537935-e8ee-4b9a-858d-37ab221c70d2" width="800" height="350">
 
-3. **Import the Library**:
+3. Add ElementBuilder via SPM: paste the repository URL and click “Add Package”.
+<img src="https://github.com/user-attachments/assets/56aff5fe-f62d-42ca-9497-e66e50e3db48" width="800" height="450">
+
+4. **Import the Library**:
 In the files where you want to use ElementBuilder, import it by adding:
 ```swift
 import ElementBuilder
 ```
 
-## 🛠️ Usage
+# 🛠️ Usage
 
-### ButtonFactory
+## ButtonFactory
 **Struct**
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift
 let button = ButtonFactory.makeButton(
 appearanceAttributes: 
 )
 ```
 ---
-### ContainerViewFactory
+## ContainerViewFactory
 **Struct** 
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift 
-let containers = ContainerFactory.
+    let container = ContainerViewFactory.makeContainerView(
+        appearanceAttributes: ViewAppearanceAttributes(
+            backgroundColor:.systemGray6,
+            cornerRadius: 25
+        ),
+        shadowAttributes: ViewShadowAttributes(
+            shadowColor: UIColor.darkGray.cgColor,
+            shadowOffset: .init(width: 0, height: 0),
+            shadowOpacity: 1,
+            shadowRadius: 3
+        )
+    )
 ```
 ---
-### DatePickerFactory
+## DatePickerFactory
 **Struct** 
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift 
 let datePicker = DatePickerFactory.
 ```
 ---
-### LabelFactory 
+## LabelFactory 
 **Struct**
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift 
-let label = LabelFactory.makeLabel(
+    let label = LabelFactory.makeLabel(
+        textAttributes: LabelTextAttributes(
+            text:"List",
+            fontSize: 28,
+            weight: .bold,
+            textColor: .black,
+            textAlignment: .center
+        ),
+        styleAttributes: LabelStyleAttributes(
+            backgroundColor: .clear
+        )
+    )
 textAttributes:
 )
 ```
 ---
-### StackViewFactory
+## StackViewFactory
 
 **Struct**
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift 
-let stack = StackViewFactory. 
+    let stackView = StackViewFactory.makeStackView(
+        configuration: StackViewConfiguration(
+            axis: .horizontal,
+            distribution: .fillEqually,
+            backgroundColor: .clear
+        ),
+        style: StackViewStyle(
+            cornerRadius: 10,
+            spacing: 10,
+            layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+        )
+    )
 ```
 ---
 ### TextFieldFactory
@@ -105,25 +141,49 @@ let stack = StackViewFactory.
 ```swift 
 public struct {}
 ```
-**Init**
+**Declaration and initialization of constants**
 ```swift
-let textField = TextFieldFactory. 
+    let textField = TextFieldFactory.makeTextField(appearanceProperties: TextFieldAppearanceProperties(
+        placeholder:"text",
+        backgroundColor: .systemGray6,
+        clipsToBounds: false
+    ),
+                                                   shadowStyle: ShadowStyle(
+                                                    color: UIColor.darkGray.cgColor, offset: .init(width: 0, height: 0), opacity: 1, radius: 3
+                                                   )
+    )
 ```
 ---
-### DateAndWeekDayFormatter
+## DateAndWeekDayFormatter
 ```swift 
 import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-    let stackView = UIStackView()
+    
+    let stackView = StackViewFactory.makeStackView(
+        configuration: StackViewConfiguration(
+            axis: .horizontal,
+            distribution: .fillEqually,
+            backgroundColor: .clear
+        ),
+        style: StackViewStyle(
+            cornerRadius: 10,
+            spacing: 10,
+            layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+        )
+    )
+    
     let dateFormatter = DateAndWeekDayFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(stackView)
-        
+        dateCalendar()
+    }
+    
+    func dateCalendar() {
         let calendar = Calendar.current
         for i in 0..<3 {
             let date = calendar.date(byAdding: .day, value: i, to: Date())!
@@ -133,37 +193,40 @@ class MyViewController: UIViewController {
 }
 ```
 ---
-### GradientFactory
+## GradientFactory
+**Declaration and initialization of constants**
 ```swift 
 let gradient = GradientFactory.makeGradientLayer(
-startColor: .systemBlue
-endColor: .systemIndigo
+    startColor: .systemBlue,
+    endColor: .systemIndigo
 )
 ```
 ---
-### ImageViewFactory
+## ImageViewFactory
+**Declaration and initialization of constants**
 ```swift 
 let yourImage = ImageViewFactory.makeImage(
-“yourNameImage”
-cornerRadius: 20
-contentMode: . scaleAspectFit,
-clipsToBounds: true ) 
-
+    “yourNameImage”,
+    cornerRadius: 20,
+    contentMode: . scaleAspectFit,
+    clipsToBounds: true 
+) 
+```
+**Declaration and initialization of constants**
+```swift 
 let systemImage = ImageViewFactory.makeSystemImageViews(
-systemName:”plus.circle”,
-tintColor: .red, 
-contentMode: . scaleAspectFit
+    systemName:”plus.circle”,
+    tintColor: .red,
+    contentMode: . scaleAspectFit
 )
 ```
 ---
-### SwipeGestureManager
+## SwipeGestureManager
 ```swift
 import UIKit
 import ElementBuilder
 
 class MyViewController: UIViewController {
-    
-    let swipeHandler = SwipeGestureManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
