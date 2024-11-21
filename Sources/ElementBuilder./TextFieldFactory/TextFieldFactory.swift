@@ -1,15 +1,22 @@
 import UIKit
 
+// Factory for creating and customizing `UITextField`.
 public struct TextFieldFactory {
     
+    // Creates and customizes the `UITextField` text field.
+    /// - Parameters:
+    /// - appearanceProperties: Parameters for the appearance of the text field.
+    /// - shadowStyle: Parameters for customizing the shadows of the text field.
+    /// - Returns: A customized instance of `UITextField`.
     public static func makeTextField(
         appearanceProperties: TextFieldAppearanceProperties? = nil,
-        shadowStyle: ShadowStyle? = nil
+        shadowStyle: ShadowStyleTextField? = nil
     ) -> UITextField {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.autocorrectionType = .yes
         
+        // Customize the appearance.
         if let appearance = appearanceProperties {
             textField.placeholder = appearance.placeholder
             textField.attributedPlaceholder = NSAttributedString(
@@ -24,6 +31,7 @@ public struct TextFieldFactory {
             textField.clipsToBounds = appearance.clipsToBounds ?? false
         }
         
+        // Customizing shadows.
         if let shadow = shadowStyle {
             textField.layer.shadowColor = shadow.color
             textField.layer.shadowOffset = shadow.offset ?? .zero

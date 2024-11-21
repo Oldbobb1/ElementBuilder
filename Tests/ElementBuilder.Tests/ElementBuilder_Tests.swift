@@ -1,5 +1,5 @@
 import XCTest
-@testable import ElementBuilder_
+@testable import ElementBuilder
 
 final class ElementBuilder_Tests: XCTestCase {
     func testExample() throws {

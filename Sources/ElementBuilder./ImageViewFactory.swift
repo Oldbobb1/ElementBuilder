@@ -1,7 +1,15 @@
 import UIKit
 
-public struct ImageViewFactory { 
+// A factory for creating customizable `UIImageView`.
+public struct ImageViewFactory {
     
+    // Creates a customizable `UIImageView` with an image from application resources.
+      /// - Parameters:
+      /// - named: Name of the image available in the resources.
+      /// - cornerRadius: The radius of corner rounding. The default is `nil`, which means no rounding.
+      /// - contentMode: The content display mode. The default is `.scaleAspectFit`.
+      /// - clipsToBounds: Determines whether the image content is cropped outside the borders. The default is `true`.
+      /// - Returns: The customized instance of `UIImageView`.
     public  static  func makeImage(
         _ named: String,
         cornerRadius: CGFloat? = nil,
@@ -17,6 +25,12 @@ public struct ImageViewFactory {
         return imageView
     }
     
+    // Creates a customizable `UIImageView` with the system image.
+       /// - Parameters:
+       /// - systemName: The name of the system image (SF Symbols).
+       /// - tintColor: The color to be applied to the system image. The default is `nil`, which means to use the default color.
+       /// - contentMode: The mode in which the content will be displayed. The default is `.scaleAspectFit`.
+       /// - Returns: The customized instance of `UIImageView`.
     public  static func makeSystemImageViews(
         systemName:String,
         tintColor: UIColor? = nil,
@@ -30,5 +44,3 @@ public struct ImageViewFactory {
         return image
     }
 }
-
-

@@ -22,3 +22,6 @@ let package = Package(
             dependencies: ["ElementBuilder"]),
     ]
 )
+
+// swift-tools-version:5.5
+
