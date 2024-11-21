@@ -10,16 +10,16 @@
 - 📆 **Date Utilities**: Format and display dates in your UI seamlessly.
 
 # 📋 Сontent 
-* [ButtonFactory](#ButtonFactory)
-* [ContainerViewFactory](#ContainerViewFactory) 
-* [DatePickerFactory](#DatePickerFactory)
-* [LabelFactory](#LabelFactory)
-* [StackViewFactory](#StackViewFactory)
-* [TextFieldFactory](#TextFieldFactory) 
-* [DateAndWeekDayFormatter](#DateAndWeekDayFormatter)
-* [GradientFactory](#GradientFactory)
-* [ImageViewFactory](#ImageViewFactory)
-* [SwipeGestureManager](#SwipeGestureManager)
+* [ButtonFactory](###ButtonFactory)
+* [ContainerViewFactory](###ContainerViewFactory) 
+* [DatePickerFactory](###DatePickerFactory)
+* [LabelFactory](###LabelFactory)
+* [StackViewFactory](###StackViewFactory)
+* [TextFieldFactory](###TextFieldFactory) 
+* [DateAndWeekDayFormatter](###DateAndWeekDayFormatter)
+* [GradientFactory](###GradientFactory)
+* [ImageViewFactory](###ImageViewFactory)
+* [SwipeGestureManager](###SwipeGestureManager)
 
 # 👮‍♂️ Requirements
 * iOS 17+ 
