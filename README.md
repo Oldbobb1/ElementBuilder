@@ -48,7 +48,6 @@ import ElementBuilder
 ```
 
 # 🛠️ Usage
-
 * Example: Creating a Login Screen
 * Here’s how to build a basic login screen using **ElementBuilder**:
 ```swift 
@@ -76,7 +75,7 @@ class LoginViewController: UIViewController {
       clipsToBounds: false,
       backgroundColor: .clear
    ), 
-      shadowAttributes: ButtonShadowAttributes(
+      shadowAttributes: ShadowAttributes(
       shadowColor: UIColor.systemRed.cgColor, 
       shadowOffset: CGSize(width: 0, height: 0), 
       shadowOpacity: 0.6,
@@ -110,11 +109,9 @@ class LoginViewController: UIViewController {
 ``` 
 
 # 📚 Factories Overview
-
 Here’s what each factory does and how it simplifies UI creation:
 
 ### ButtonFactory 
-
 * **Purpose**: Creates customizable buttons.
 * **Usage**:
 ```swift
@@ -123,7 +120,7 @@ Here’s what each factory does and how it simplifies UI creation:
       clipsToBounds: false,
       backgroundColor: .clear
    ), 
-      shadowAttributes: ButtonShadowAttributes(
+      shadowAttributes: ShadowAttributes(
       shadowColor: UIColor.systemRed.cgColor, 
       shadowOffset: CGSize(width: 0, height: 0), 
       shadowOpacity: 0.6,
@@ -139,7 +136,6 @@ Here’s what each factory does and how it simplifies UI creation:
 ```
 
 ### ContainerViewFactory 
-
 * **Purpose**: Generates views with customizable shadows and rounded corners.
 * **Usage**:
 ```swift 
@@ -147,7 +143,7 @@ Here’s what each factory does and how it simplifies UI creation:
       backgroundColor:.systemGray6,
       cornerRadius: 25
     ),
-      shadowAttributes: ViewShadowAttributes(
+      shadowAttributes: ShadowAttributes(
       shadowColor: UIColor.darkGray.cgColor,
       shadowOffset: .init(width: 0, height: 0),
       shadowOpacity: 1,
@@ -157,7 +153,6 @@ Here’s what each factory does and how it simplifies UI creation:
 ```
 
 ### DatePickerFactory 
-
 * **Purpose**: Creates a date picker with customizable styles.
 * **Usage**:
 ```swift 
@@ -172,7 +167,6 @@ Here’s what each factory does and how it simplifies UI creation:
 ```
 
 ### LabelFactory 
-
 * **Purpose**: Builds labels with specific text and style attributes.
 * **Usage**:
 ```swift 
@@ -217,7 +211,7 @@ Here’s what each factory does and how it simplifies UI creation:
       backgroundColor: .systemGray6,
       clipsToBounds: false
     ),
-      shadowStyle: ShadowStyle(
+      shadowAttributes: ShadowAttributes(
       color: UIColor.darkGray.cgColor, offset: .init(width: 0, height: 0),
       opacity: 1, 
       radius: 3
@@ -226,7 +220,6 @@ Here’s what each factory does and how it simplifies UI creation:
 ```
 
 ### DateAndWeekDayFormatter 
-
 * **Purpose**: Simplifies date formatting and displays dates with corresponding weekdays in UI elements like stack views.
 * **Usage**:
 ```swift 

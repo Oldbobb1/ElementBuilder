@@ -27,6 +27,9 @@ public struct DatePickerAppearanceAttributes {
     //backgroundColor
     var backgroundColor: UIColor?
     
+    // Specifies whether to crop the content outside the `UIDatePicker` borders.
+    var clipsToBounds: Bool?
+    
     // Initializer for specifying the appearance of `UIDatePicker`.
        /// - Parameters:
        /// - datePickerMode: The display mode of the `UIDatePicker`.
@@ -34,17 +37,20 @@ public struct DatePickerAppearanceAttributes {
        /// - cornerRadius: Corner rounding radius.
        /// - masksToBounds: Specifies whether to crop the content to borders.
        /// - backgroundColor: Background color.
+       /// - clipsToBounds: Specifies whether to crop the content along the borders.
     public init(
         datePickerMode: UIDatePicker.Mode? = nil,
         preferredDatePickerStyle: UIDatePickerStyle? = nil,
         cornerRadius: CGFloat? = nil,
         masksToBounds: Bool? = nil,
-        backgroundColor: UIColor? = nil
+        backgroundColor: UIColor? = nil,
+        clipsToBounds: Bool? = nil
     ){
         self.datePickerMode = datePickerMode
         self.preferredDatePickerStyle = preferredDatePickerStyle
         self.cornerRadius = cornerRadius
         self.masksToBounds = masksToBounds
         self.backgroundColor =  backgroundColor
+        self.clipsToBounds = clipsToBounds
     }
 }

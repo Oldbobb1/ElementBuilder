@@ -1,7 +1,7 @@
 import UIKit
 
-// Structure for customizing button shadows.
-public struct ButtonShadowAttributes {
+// Structure for customizing the shadow style.
+public struct ShadowAttributes {
     
     //Shade Color
     var shadowColor: CGColor?
@@ -15,21 +15,21 @@ public struct ButtonShadowAttributes {
     //Shadow blur radius.
     var shadowRadius: CGFloat?
     
-    // Initializer of the structure for setting the button shadows.
+    // Initializer for setting the shadow parameters.
     /// - Parameters:
-    ///   - shadowColor: Shade Color
-    ///   - shadowOffset: Shadow shifting.
-    ///   - shadowOpacity:Shadow Transparency.
-    ///   - shadowRadius: Shadow blur radius.
+    /// - shadowColor: The color of the shadow.
+    /// - shadowOffset: The offset of the shadow.
+    /// - shadowOpacity: The transparency of the shadow.
+    /// - shadowRadius: The shadow's blurring radius.
     public init(
         shadowColor: CGColor? = nil,
         shadowOffset: CGSize? = nil,
         shadowOpacity: Float? = nil,
         shadowRadius: CGFloat? = nil
-    ) {
+    ){
         self.shadowColor = shadowColor
         self.shadowOffset = shadowOffset
-        self.shadowOpacity = shadowOpacity
+        self.shadowOpacity  = shadowOpacity
         self.shadowRadius = shadowRadius
     }
 }

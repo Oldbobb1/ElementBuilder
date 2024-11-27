@@ -11,7 +11,7 @@ public struct ButtonFactory {
         /// - Returns: A customized instance of `UIButton`.
     public static func makeButton(
         appearanceAttributes: ButtonAppearanceAttributes? = nil,
-        shadowAttributes: ButtonShadowAttributes? = nil,
+        shadowAttributes: ShadowAttributes? = nil,
         imageAttributes: ButtonImageAttributes? = nil
     ) -> UIButton {
         let button = UIButton(type: .system)

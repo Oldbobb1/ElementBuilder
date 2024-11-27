@@ -10,7 +10,7 @@ public struct TextFieldFactory {
     /// - Returns: A customized instance of `UITextField`.
     public static func makeTextField(
         appearanceProperties: TextFieldAppearanceProperties? = nil,
-        shadowStyle: ShadowStyleTextField? = nil
+        shadowAttributes: ShadowAttributes? = nil
     ) -> UITextField {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
@@ -32,11 +32,11 @@ public struct TextFieldFactory {
         }
         
         // Customizing shadows.
-        if let shadow = shadowStyle {
-            textField.layer.shadowColor = shadow.color
-            textField.layer.shadowOffset = shadow.offset ?? .zero
-            textField.layer.shadowOpacity = shadow.opacity ?? 0
-            textField.layer.shadowRadius = shadow.radius ?? 0
+        if let shadow = shadowAttributes {
+            textField.layer.shadowColor = shadow.shadowColor
+            textField.layer.shadowOffset = shadow.shadowOffset ?? .zero
+            textField.layer.shadowOpacity = shadow.shadowOpacity ?? 0
+            textField.layer.shadowRadius = shadow.shadowRadius ?? 0
         }
         return textField
     }

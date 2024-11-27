@@ -10,7 +10,7 @@ public struct ContainerViewFactory {
        /// - Returns: The customized instance of `UIView`.
     public static func makeContainerView(
         appearanceAttributes: ViewAppearanceAttributes? = nil,
-        shadowAttributes: ViewShadowAttributes? = nil
+        shadowAttributes: ShadowAttributes? = nil
     ) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
