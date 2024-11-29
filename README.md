@@ -32,14 +32,17 @@ To add the ElementBuilder library to your Xcode project, follow these steps:
 ### Using Swift Package Manager
 
 1.**Open the "Package Dependencies" section in Xcode**: select the “Package Dependencies” tab in the project settings.
-<img src="https://github.com/user-attachments/assets/98ad5ff8-4b32-4eff-a2c7-41c9480f96cb" width="800" height="350">
+<!--<img src="https://github.com/user-attachments/assets/98ad5ff8-4b32-4eff-a2c7-41c9480f96cb" width="800" height="350">-->
+<img src="/image/screen1.png" width="800" height="350">
 
 2.**Add a dependency**: click the '+' button to add a new package.
-<img src="https://github.com/user-attachments/assets/3b537935-e8ee-4b9a-858d-37ab221c70d2" width="1000" height="350">
+<!--<img src="https://github.com/user-attachments/assets/3b537935-e8ee-4b9a-858d-37ab221c70d2" width="1000" height="350">-->
+<img src="/image/screen2.png" width="1000" height="350">
 
 3.**Enter the repository URL**:
 Paste the repository URL and click “Add Package.”.
-<img src="https://github.com/user-attachments/assets/56aff5fe-f62d-42ca-9497-e66e50e3db48" width="1000" height="550">
+<!--<img src="https://github.com/user-attachments/assets/56aff5fe-f62d-42ca-9497-e66e50e3db48" width="1000" height="550">-->
+<img src="/image/screen3.png" width="100" height="550">
 
 4.**Import the Library**:
 In the files where you want to use ElementBuilder, import it by adding:
