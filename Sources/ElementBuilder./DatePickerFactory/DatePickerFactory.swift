@@ -2,7 +2,6 @@ import UIKit
 
 //Factory for creating conteiner "DatePicker"
 public struct DatePickerFactory {
-    
     // Creates and customizes the `DatePicker`.
        /// - Parameters:
        /// - appearanceAttributes: Attributes of the DatePicker appearance.
@@ -12,8 +11,8 @@ public struct DatePickerFactory {
         appearanceAttributes: DatePickerAppearanceAttributes? = nil,
         shadowAttributes: ShadowAttributes? = nil
     ) -> UIDatePicker {
-        let datePicker = UIDatePicker()
         
+        let datePicker = UIDatePicker()
         // Applying appearance attributes.
         if let appearance = appearanceAttributes {
             datePicker.datePickerMode = appearance.datePickerMode ?? .time
@@ -23,7 +22,6 @@ public struct DatePickerFactory {
             datePicker.backgroundColor = appearance.backgroundColor
             datePicker.clipsToBounds = appearance.clipsToBounds ?? false
         }
-        
         // Applying shadow attributes.
         if let shadow = shadowAttributes {
             datePicker.layer.shadowColor = shadow.shadowColor

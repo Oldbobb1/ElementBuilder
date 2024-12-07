@@ -2,7 +2,6 @@ import UIKit
 
 // Factory for creating buttons and switches.
 public struct ButtonFactory {
-    
     // Creates a button with the given attributes.
         /// - Parameters:
         /// - appearanceAttributes: Attributes of the button's appearance.
@@ -56,7 +55,6 @@ public struct ButtonFactory {
         }
         return button
     }
-    
     // Creates a switch (`UISwitch`) with the specified parameters.
      /// - Parameters:
      /// - isOn: The state of the switch (on or off).

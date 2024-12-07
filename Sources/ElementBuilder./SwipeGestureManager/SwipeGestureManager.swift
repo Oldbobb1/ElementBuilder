@@ -28,7 +28,6 @@ public class SwipeGestureManager {
         self.viewController = viewController
         self.leftAction = leftAction
         self.rightAction = rightAction
-        
         configureSwipeGestures()
     }
     
@@ -59,3 +58,10 @@ public class SwipeGestureManager {
         rightAction()
     }
 }
+
+
+
+
+
+
+

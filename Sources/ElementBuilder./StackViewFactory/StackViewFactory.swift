@@ -2,7 +2,6 @@ import UIKit
 
 // Factory for creating and customizing `UIStackView`.
 public struct StackViewFactory {
-    
     // Creates and customizes `UIStackView` based on the passed parameters.
     /// - Parameters:
     /// - configuration: Axis, distribution, and background configuration.
@@ -12,16 +11,15 @@ public struct StackViewFactory {
         configuration: StackViewConfiguration? = nil,
         style: StackViewStyle? = nil
     ) -> UIStackView {
+        
         let stackView = UIStackView()
         stackView.isLayoutMarginsRelativeArrangement = true
-        
         // Configuration setting.
         if let config = configuration {
             stackView.axis = config.axis ?? .horizontal
             stackView.distribution = config.distribution ?? .fillEqually
             stackView.backgroundColor = config.backgroundColor
         }
-        
         // Customize style.
         if let style = style {
             stackView.layer.cornerRadius = style.cornerRadius ?? 0

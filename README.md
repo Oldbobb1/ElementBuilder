@@ -61,36 +61,38 @@ import ElementBuilder
 
 class LoginViewController: UIViewController {
 
-  let titleLabel = LabelFactory.makeLabel(textAttributes: LabelTextAttributes(
-      text:"Title Label",
-      fontSize: 30,
-      weight: .bold,
-      wtextColor: .black,
-      wtextAlignment: .center
-   ),
-      styleAttributes:LabelStyleAttributes(
-      backgroundColor: .clear,
-      clipsToBounds: false
-   )
+ let titleLabel = LabelFactory.makeLabel(
+    textAttributes: LabelTextAttributes(
+        text:"Title Label",
+        fontSize: 30,
+        weight: .bold,
+        wtextColor: .black,
+        wtextAlignment: .center
+    ),
+    styleAttributes:LabelStyleAttributes(
+        backgroundColor: .clear,
+        clipsToBounds: false
+    )
 )
 
-  let buttonCloseView = ButtonFactory.makeButton(appearanceAttributes: ButtonAppearanceAttributes(
-      cornerRadius: 17, 
-      clipsToBounds: false,
-      backgroundColor: .clear
-   ), 
-      shadowAttributes: ShadowAttributes(
-      shadowColor: UIColor.systemRed.cgColor, 
-      shadowOffset: CGSize(width: 0, height: 0), 
-      shadowOpacity: 0.6,
-      shadowRadius: 3
-   ), 
-      imageAttributes: ButtonImageAttributes(
-      systemName:"x.circle", 
-      imageSize: CGSize(width: 39, height: 38) ,
-      alpha: 1,
-      tintColor: .red
-   )
+let buttonCloseView = ButtonFactory.makeButton(
+    appearanceAttributes: ButtonAppearanceAttributes(
+        cornerRadius: 17,
+        clipsToBounds: false,
+        backgroundColor: .clear
+    ),
+    shadowAttributes: ShadowAttributes(
+        shadowColor: UIColor.systemRed.cgColor,
+        shadowOffset: CGSize(width: 0, height: 0),
+        shadowOpacity: 0.6,
+        shadowRadius: 3
+    ),
+    imageAttributes: ButtonImageAttributes(
+        systemName:"x.circle",
+        imageSize: CGSize(width: 39, height: 38) ,
+        alpha: 1,
+        tintColor: .red
+    )
 )
   
   override func viewDidLoad() {
@@ -119,39 +121,42 @@ Here’s what each factory does and how it simplifies UI creation:
 * **Purpose**: Creates customizable buttons.
 * **Usage**:
 ```swift
-  let buttonCloseView = ButtonFactory.makeButton(appearanceAttributes: ButtonAppearanceAttributes(
-      cornerRadius: 17, 
-      clipsToBounds: false,
-      backgroundColor: .clear
-   ), 
-      shadowAttributes: ShadowAttributes(
-      shadowColor: UIColor.systemRed.cgColor, 
-      shadowOffset: CGSize(width: 0, height: 0), 
-      shadowOpacity: 0.6,
-      shadowRadius: 3
-   ), 
-      imageAttributes: ButtonImageAttributes(
-      systemName:"x.circle", 
-      imageSize: CGSize(width: 39, height: 38) ,
-      alpha: 1,
-      tintColor: .red
-   )
+  let buttonCloseView = ButtonFactory.makeButton(
+    appearanceAttributes: ButtonAppearanceAttributes(
+        cornerRadius: 17,
+        clipsToBounds: false,
+        backgroundColor: .clear
+    ),
+    shadowAttributes: ShadowAttributes(
+        shadowColor: UIColor.systemRed.cgColor,
+        shadowOffset: CGSize(width: 0, height: 0),
+        shadowOpacity: 0.6,
+        shadowRadius: 3
+    ),
+    imageAttributes: ButtonImageAttributes(
+        systemName:"x.circle",
+        imageSize: CGSize(width: 39, height: 38) ,
+        alpha: 1,
+        tintColor: .red
+    )
 )
+
 ```
 
 ### ContainerViewFactory 
 * **Purpose**: Generates views with customizable shadows and rounded corners.
 * **Usage**:
 ```swift 
-  let container = ContainerViewFactory.makeContainerView(appearanceAttributes: ViewAppearanceAttributes(
-      backgroundColor:.systemGray6,
-      cornerRadius: 25
+let container = ContainerViewFactory.makeContainerView(
+    appearanceAttributes: ViewAppearanceAttributes(
+        backgroundColor:.systemGray6,
+        cornerRadius: 25
     ),
-      shadowAttributes: ShadowAttributes(
-      shadowColor: UIColor.darkGray.cgColor,
-      shadowOffset: .init(width: 0, height: 0),
-      shadowOpacity: 1,
-      shadowRadius: 3
+    shadowAttributes: ShadowAttributes(
+        shadowColor: UIColor.darkGray.cgColor,
+        shadowOffset: .init(width: 0, height: 0),
+        shadowOpacity: 1,
+        shadowRadius: 3
     )
 )
 ```
@@ -160,13 +165,14 @@ Here’s what each factory does and how it simplifies UI creation:
 * **Purpose**: Creates a date picker with customizable styles.
 * **Usage**:
 ```swift 
-  let datePicker = DatePickerFactory.makeDatePicker( appearanceAttributes: DatePickerAppearanceAttributes(
-      datePickerMode: .time, 
-      preferredDatePickerStyle: .wheels, 
-      cornerRadius: 15, 
-      masksToBounds: true, 
-      backgroundColor: .systemGray6 
-    )  
+ let datePicker = DatePickerFactory.makeDatePicker(
+    appearanceAttributes: DatePickerAppearanceAttributes(
+        datePickerMode: .time,
+        preferredDatePickerStyle: .wheels,
+        cornerRadius: 15,
+        masksToBounds: true,
+        backgroundColor: .systemGray6
+    )
 )
 ```
 
@@ -192,16 +198,16 @@ Here’s what each factory does and how it simplifies UI creation:
 * **Purpose**: Creates stack views with flexible layouts.
 * **Usage**:
 ```swift 
-  let stackView = StackViewFactory.makeStackView(
-      configuration: StackViewConfiguration(
-      axis: .horizontal,
-      distribution: .fillEqually,
-      backgroundColor: .clear
+ let stackView = StackViewFactory.makeStackView(
+    configuration: StackViewConfiguration(
+        axis: .horizontal,
+        distribution: .fillEqually,
+        backgroundColor: .clear
     ),
-      style: StackViewStyle(
-      cornerRadius: 10,
-      spacing: 10,
-      layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+    style: StackViewStyle(
+        cornerRadius: 10,
+        spacing: 10,
+        layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
     )
 )
 ```
@@ -210,15 +216,17 @@ Here’s what each factory does and how it simplifies UI creation:
 * **Purpose**: Creates text fields with customizable appearance and shadow styles.
 * **Usage**:
 ```swift
-  let textField = TextFieldFactory.makeTextField(appearanceProperties: TextFieldAppearanceProperties(
-      placeholder:"text",
-      backgroundColor: .systemGray6,
-      clipsToBounds: false
+let textField = TextFieldFactory.makeTextField(
+    appearanceProperties: TextFieldAppearanceProperties(
+        placeholder:"text",
+        backgroundColor: .systemGray6,
+        clipsToBounds: false
     ),
-      shadowAttributes: ShadowAttributes(
-      color: UIColor.darkGray.cgColor, offset: .init(width: 0, height: 0),
-      opacity: 1, 
-      radius: 3
+    shadowAttributes: ShadowAttributes(
+        color: UIColor.darkGray.cgColor,
+        offset: .init(width: 0, height: 0),
+        opacity: 1,
+        radius: 3
     )
 )
 ```
@@ -232,18 +240,18 @@ import ElementBuilder
 
 class MyViewController: UIViewController {
     
-  let stackView = StackViewFactory.makeStackView(
-      configuration: StackViewConfiguration(
-      axis: .horizontal,
-      distribution: .fillEqually,
-      backgroundColor: .clear
-    ),
-      style: StackViewStyle(
-      cornerRadius: 10,
-      spacing: 10,
-      layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+    let stackView = StackViewFactory.makeStackView(
+        configuration: StackViewConfiguration(
+            axis: .horizontal,
+            distribution: .fillEqually,
+            backgroundColor: .clear
+        ),
+        style: StackViewStyle(
+            cornerRadius: 10,
+            spacing: 10,
+            layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+        )
     )
-)
 
   let dateFormatter = DateAndWeekDayFormatter()
   
