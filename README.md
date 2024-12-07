@@ -340,8 +340,8 @@ class MyViewController: UIViewController {
 }
 ```
 
-# 🧪 Tests
-ElementBuilder includes unit tests for all major factories to ensure reliability and smooth integration. Simply run the ElementBuilderTests target to verify functionality.
+<!--# 🧪 Tests-->
+<!--ElementBuilder includes unit tests for all major factories to ensure reliability and smooth integration. Simply run the ElementBuilderTests target to verify functionality.-->
 
 ## Conclusion
 **ElementBuilder** a framework offers developers powerful and convenient tools for creating and managing UI elements in UIKit-based applications. It reduces the amount of code needed for UI development and makes the process of building interfaces more intuitive and flexible.
