@@ -3,14 +3,9 @@ import UIKit
 // Structure for customizing the style of the UILabel.
 public struct LabelStyleAttributes {
     
-    // Label background color.
-    var backgroundColor: UIColor?
-    
-    // Specifies whether to crop the content outside the label layer boundaries.
-    var clipsToBounds: Bool?
-    
-    // Rounding radius of the label corners.
-    var cornerRadius: CGFloat?
+    var backgroundColor: UIColor?  // Label background color.
+    var clipsToBounds: Bool?  // Specifies whether to crop the content outside the label layer boundaries.
+    var cornerRadius: CGFloat?   // Rounding radius of the label corners.
     
     // Initializer for setting the label style.
     /// - Parameters:
@@ -24,7 +19,7 @@ public struct LabelStyleAttributes {
     ) {
         self.backgroundColor = backgroundColor
         self.clipsToBounds = clipsToBounds
-        self.cornerRadius =  cornerRadius
+        self.cornerRadius = cornerRadius
     }
 }
 

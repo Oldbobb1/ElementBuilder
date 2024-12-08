@@ -1,34 +1,16 @@
 import UIKit
-
 // Structure for customizing the appearance of the button.
 public struct ButtonAppearanceAttributes {
     
-    // button text
-    var setTitle: String?
-    
-    //Corner rounding radius.
-    var cornerRadius: CGFloat?
-    
-    // Horizontal alignment of the content.
-    var contentHorizontalAlignment: UIControl.ContentHorizontalAlignment?
-    
-    // text color
-    var setTitleColor: UIColor?
-    
-    //text font
-    var font: UIFont?
-    
-    //button configuration
-    var configuration: UIButton.Configuration?
-    
-    //flag to trim the content beyond the boundaries.
-    var clipsToBounds: Bool?
-    
-    //backgroundColor
-    var backgroundColor: UIColor?
-    
-    // button tag.
-    var tag: Int?
+    var setTitle: String?    // button text
+    var cornerRadius: CGFloat?   //Corner rounding radius.
+    var contentHorizontalAlignment: UIControl.ContentHorizontalAlignment?  // Horizontal alignment of the content.
+    var setTitleColor: UIColor?   // text color
+    var font: UIFont?    //text font
+    var configuration: UIButton.Configuration?   //button configuration
+    var clipsToBounds: Bool?    //flag to trim the content beyond the boundaries.
+    var backgroundColor: UIColor?  //backgroundColor
+    var tag: Int?   // button tag.
     
     // Structure initializer to customize the appearance of the button.
     /// - Parameters:

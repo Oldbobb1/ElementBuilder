@@ -25,7 +25,7 @@ public struct DatePickerFactory {
         // Applying shadow attributes.
         if let shadow = shadowAttributes {
             datePicker.layer.shadowColor = shadow.shadowColor
-            datePicker.layer.shadowOffset =  shadow.shadowOffset ?? .zero
+            datePicker.layer.shadowOffset = shadow.shadowOffset ?? .zero
             datePicker.layer.shadowOpacity = shadow.shadowOpacity ?? 0
             datePicker.layer.shadowRadius = shadow.shadowRadius ?? 0
         }

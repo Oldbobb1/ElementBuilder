@@ -1,6 +1,6 @@
 import XCTest
-@testable import ElementBuilder
 
+@testable import ElementBuilder
 
 final class ImageViewFactoryTest: XCTestCase {
  
@@ -8,7 +8,7 @@ final class ImageViewFactoryTest: XCTestCase {
         let testImage = ImageViewFactory.makeImage("nameImage")
         
         XCTAssertEqual(testImage.image,UIImage(named: "nameImage"))
-        XCTAssertEqual(testImage.layer.cornerRadius,0)
+        XCTAssertEqual(testImage.layer.cornerRadius, 0)
         XCTAssertEqual(testImage.contentMode, .scaleToFill)
         XCTAssertFalse(testImage.clipsToBounds)
     }
@@ -22,7 +22,7 @@ final class ImageViewFactoryTest: XCTestCase {
         )
         
         XCTAssertEqual(testImage.image,UIImage(named: "nameImage"))
-        XCTAssertEqual(testImage.layer.cornerRadius,15)
+        XCTAssertEqual(testImage.layer.cornerRadius, 15)
         XCTAssertEqual(testImage.contentMode, .scaleAspectFill)
         XCTAssertTrue(testImage.clipsToBounds)
     }

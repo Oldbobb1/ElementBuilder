@@ -3,11 +3,8 @@ import UIKit
 // Structure for customizing the appearance of the UIView.
 public struct ViewAppearanceAttributes {
     
-    //backgroundColor
-    var backgroundColor: UIColor?
-    
-    //Corner rounding radius.
-    var cornerRadius: CGFloat?
+    var backgroundColor: UIColor?    //backgroundColor
+    var cornerRadius: CGFloat?    //Corner rounding radius.
     
     // Structure initializer to customize the appearance of the UIView.
     /// - Parameters:

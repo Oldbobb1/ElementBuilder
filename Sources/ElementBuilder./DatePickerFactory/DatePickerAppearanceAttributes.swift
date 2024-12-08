@@ -3,32 +3,12 @@ import UIKit
 // Structure for customizing the appearance of the DatePicker.
 public struct DatePickerAppearanceAttributes {
     
-    // `UIDatePicker` display mode.
-       /// - Possible values:
-       /// - `time`: Time only.
-       /// - `date`: Date only.
-       /// - `dateAndTime`: Date and time.
-       /// - `countDownTimer`: Countdown timer.
-    var datePickerMode: UIDatePicker.Mode?
-    
-    // Preferred `UIDatePicker` display style.
-        /// - Possible values:
-        /// - `wheels`: Wheel style.
-        /// - `compact`: Compact style.
-        /// - `inline`: Built-in style.
-    var preferredDatePickerStyle: UIDatePickerStyle?
-    
-    /// Corner rounding radius for `UIDatePicker`
-    var cornerRadius: CGFloat?
-    
-    // Specifies whether the contents of `UIDatePicker` should be trimmed along its borders.
-    var masksToBounds: Bool?
-    
-    //backgroundColor
-    var backgroundColor: UIColor?
-    
-    // Specifies whether to crop the content outside the `UIDatePicker` borders.
-    var clipsToBounds: Bool?
+    var datePickerMode: UIDatePicker.Mode?   // `UIDatePicker` display mode.
+    var preferredDatePickerStyle: UIDatePickerStyle?  // Preferred `UIDatePicker` display style.
+    var cornerRadius: CGFloat?   // Corner rounding radius for `UIDatePicker`
+    var masksToBounds: Bool?   // Specifies whether the contents of `UIDatePicker` should be trimmed along its borders.
+    var backgroundColor: UIColor?      //backgroundColor
+    var clipsToBounds: Bool?   // Specifies whether to crop the content outside the `UIDatePicker` borders.
     
     // Initializer for specifying the appearance of `UIDatePicker`.
        /// - Parameters:
@@ -50,7 +30,7 @@ public struct DatePickerAppearanceAttributes {
         self.preferredDatePickerStyle = preferredDatePickerStyle
         self.cornerRadius = cornerRadius
         self.masksToBounds = masksToBounds
-        self.backgroundColor =  backgroundColor
+        self.backgroundColor = backgroundColor
         self.clipsToBounds = clipsToBounds
     }
 }

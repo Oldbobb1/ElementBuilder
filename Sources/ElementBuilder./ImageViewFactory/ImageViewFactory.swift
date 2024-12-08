@@ -31,7 +31,7 @@ public struct ImageViewFactory {
        /// - contentMode: The mode in which the content will be displayed. The default is `.scaleAspectFit`.
        /// - Returns: The customized instance of `UIImageView`.
     public  static func makeSystemImageViews(
-        systemName:String,
+        systemName: String,
         tintColor: UIColor? = nil,
         contentMode: UIView.ContentMode? = nil
     ) -> UIImageView {

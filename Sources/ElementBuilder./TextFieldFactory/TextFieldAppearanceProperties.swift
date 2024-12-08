@@ -2,24 +2,13 @@ import UIKit
 
 // Structure for customizing the appearance of the `UITextField` text field.
 public struct TextFieldAppearanceProperties {
-    
-    // Tooltip text (placeholder).
-    var  placeholder: String?
-    
-    // Corner Rounding Radius.
-    var  cornerRadius: CGFloat?
-    
-    // Text font.
-    var  font: UIFont?
-    
-    // Text field background color.
-    var  backgroundColor: UIColor?
-    
-    // A property that specifies whether the sublayers of the text box are clipped outside its borders.
-    var  clipsToBounds: Bool?
-    
-    // Content display mode.
-    var contentMode: UIView.ContentMode?
+
+    var placeholder: String?   // Tooltip text (placeholder).
+    var cornerRadius: CGFloat?  // Corner Rounding Radius.
+    var font: UIFont?   // Text font.
+    var backgroundColor: UIColor?  // Text field background color.
+    var clipsToBounds: Bool?   // A property that specifies whether the sublayers of the text box are clipped outside its borders.
+    var contentMode: UIView.ContentMode?   // Content display mode.
     
     // Initializer for specifying appearance parameters.
     /// - Parameters:

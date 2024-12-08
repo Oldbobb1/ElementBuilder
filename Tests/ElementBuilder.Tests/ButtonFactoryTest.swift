@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import ElementBuilder
 
 final class ButtonFactoryTest: XCTestCase {
@@ -28,8 +29,8 @@ final class ButtonFactoryTest: XCTestCase {
   
         XCTAssertEqual(testDefaultButton.layer.shadowColor, UIColor.black.cgColor)
         XCTAssertEqual(testDefaultButton.layer.shadowOffset, .init(width: 1, height: 1))
-        XCTAssertEqual(testDefaultButton.layer.shadowOpacity,2)
-        XCTAssertEqual(testDefaultButton.layer.shadowRadius,4)
+        XCTAssertEqual(testDefaultButton.layer.shadowOpacity, 2)
+        XCTAssertEqual(testDefaultButton.layer.shadowRadius, 4)
     }
 
     func testImageButton() {

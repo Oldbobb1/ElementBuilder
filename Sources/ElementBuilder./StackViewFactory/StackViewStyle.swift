@@ -3,14 +3,9 @@ import UIKit
 // Structure for customizing the `UIStackView` style.
 public struct StackViewStyle {
     
-    // Corner rounding radius.
-    var cornerRadius: CGFloat?
-    
-    // Distance between elements in the stack.
-    var spacing: CGFloat?
-    
-    // Internal layout margins for the stack.
-    var layoutMargins: UIEdgeInsets?
+    var cornerRadius: CGFloat?   // Corner rounding radius.
+    var spacing: CGFloat?  // Distance between elements in the stack.
+    var layoutMargins: UIEdgeInsets?  // Internal layout margins for the stack.
     
     // Initializer for setting the stack style.
     /// - Parameters:

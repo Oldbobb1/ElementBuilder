@@ -1,6 +1,6 @@
 import XCTest
-@testable import ElementBuilder
 
+@testable import ElementBuilder
 
 final class LabelFactoryTest: XCTestCase {
                 

@@ -3,17 +3,10 @@ import UIKit
 // Structure for customizing the shadow style.
 public struct ShadowAttributes {
     
-    //Shade Color
-    var shadowColor: CGColor?
-    
-    // Shadow shifting.
-    var shadowOffset: CGSize?
-    
-    //Shadow Transparency.
-    var shadowOpacity: Float?
-    
-    //Shadow blur radius.
-    var shadowRadius: CGFloat?
+    var shadowColor: CGColor?   //Shade Color
+    var shadowOffset: CGSize?   // Shadow shifting.
+    var shadowOpacity: Float?    //Shadow Transparency.
+    var shadowRadius: CGFloat?   //Shadow blur radius.
     
     // Initializer for setting the shadow parameters.
     /// - Parameters:
@@ -29,7 +22,7 @@ public struct ShadowAttributes {
     ){
         self.shadowColor = shadowColor
         self.shadowOffset = shadowOffset
-        self.shadowOpacity  = shadowOpacity
+        self.shadowOpacity = shadowOpacity
         self.shadowRadius = shadowRadius
     }
 }

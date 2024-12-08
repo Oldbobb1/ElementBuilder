@@ -3,14 +3,9 @@ import UIKit
 // Structure for setting the `UIStackView` configuration.
 public struct StackViewConfiguration {
     
-    /// Axis for placing elements in `UIStackView` (horizontal or vertical).
-    var axis: NSLayoutConstraint.Axis?
-    
-    // Distribution of elements inside `UIStackView`.
-    var distribution: UIStackView.Distribution?
-    
-    // Background color of the stack.
-    var backgroundColor: UIColor?
+    var axis: NSLayoutConstraint.Axis?    // Axis for placing elements in `UIStackView` (horizontal or vertical).
+    var distribution: UIStackView.Distribution? // Distribution of elements inside `UIStackView`.
+    var backgroundColor: UIColor?  // Background color of the stack.
     
     // Initializer for configuration settings.
     /// - Parameters:

@@ -1,6 +1,6 @@
 import XCTest
-@testable import ElementBuilder
 
+@testable import ElementBuilder
 
 final class StackViewFactoryTest: XCTestCase {
     
@@ -27,7 +27,7 @@ final class StackViewFactoryTest: XCTestCase {
         
         let testStackView = StackViewFactory.makeStackView( style: testStyle)
     
-        XCTAssertEqual(testStackView.layer.cornerRadius,20)
+        XCTAssertEqual(testStackView.layer.cornerRadius, 20)
         XCTAssertEqual(testStackView.spacing, 4)
         XCTAssertEqual(testStackView.layoutMargins, .init(top: 10, left: 0, bottom: -10, right: 0))
     }

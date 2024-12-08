@@ -1,6 +1,6 @@
 import XCTest
-@testable import ElementBuilder
 
+@testable import ElementBuilder
 
 final class TextFieldFactoryTest: XCTestCase {
     
@@ -18,12 +18,12 @@ final class TextFieldFactoryTest: XCTestCase {
         
         XCTAssertEqual(testTextField.placeholder, testAppearene.placeholder)
         XCTAssertEqual(testTextField.layer.cornerRadius, 20)
-        XCTAssertEqual(testTextField.font?.fontDescriptor.symbolicTraits.contains(.traitBold),true)
+        XCTAssertEqual(testTextField.font?.fontDescriptor.symbolicTraits.contains(.traitBold), true)
         XCTAssertTrue(testTextField.clipsToBounds)
         XCTAssertEqual(testTextField.contentMode, .scaleAspectFit)
     
     }
-        
+    
     func testStyleTextField() {
         let testStyle = ShadowAttributes(
             shadowColor: UIColor.black.cgColor,
@@ -45,7 +45,7 @@ final class TextFieldFactoryTest: XCTestCase {
         
         XCTAssertNil(testTextField.placeholder)
         XCTAssertEqual(testTextField.layer.cornerRadius, 0)
-        XCTAssertEqual(testTextField.font?.pointSize,16)
+        XCTAssertEqual(testTextField.font?.pointSize, 16)
         XCTAssertFalse(testTextField.clipsToBounds)
     }
         
@@ -73,7 +73,7 @@ final class TextFieldFactoryTest: XCTestCase {
         
         XCTAssertEqual(testTextField.placeholder, testAppearene.placeholder)
         XCTAssertEqual(testTextField.layer.cornerRadius, 20)
-        XCTAssertEqual(testTextField.font?.fontDescriptor.symbolicTraits.contains(.traitBold),true)
+        XCTAssertEqual(testTextField.font?.fontDescriptor.symbolicTraits.contains(.traitBold), true)
         XCTAssertTrue(testTextField.clipsToBounds)
         XCTAssertEqual(testTextField.contentMode, .scaleAspectFit)
         

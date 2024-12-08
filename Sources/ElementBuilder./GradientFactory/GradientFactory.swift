@@ -9,7 +9,7 @@ public struct GradientFactory {
        /// - alpha: Transparency (alpha channel) for the start and end colors.
        /// - Returns: The customized instance of `CAGradientLayer`.
    public static func makeGradientLayer(
-      startColor:UIColor,
+      startColor: UIColor,
       endColor: UIColor,
       alpha: CGFloat? = nil
    ) -> CAGradientLayer {

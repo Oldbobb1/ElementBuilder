@@ -3,26 +3,13 @@ import UIKit
 // Structure for customizing the button image.
 public struct ButtonImageAttributes {
     
-    //The name of the system image.
-    var systemName: String?
-    
-    // Custom Image.
-    var setImage: UIImage?
-    
-    //Image size
-    var imageSize: CGSize?
-    
-    //Image Transparency.
-    var alpha: Double?
-    
-    // The fill color of the image.
-    var tintColor: UIColor?
-    
-    //Image width
-    var width: Int?
-    
-    //Image height
-    var height: Int?
+    var systemName: String?      //The name of the system image.
+    var setImage: UIImage?     // Custom Image.
+    var imageSize: CGSize?      //Image size
+    var alpha: Double?      //Image Transparency.
+    var tintColor: UIColor?   // The fill color of the image.
+    var width: Int?   //Image width
+    var height: Int?       //Image height
     
     // Initializer of the structure to configure the button image.
     /// - Parameters:
