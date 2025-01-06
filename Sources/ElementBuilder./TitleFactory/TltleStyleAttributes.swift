@@ -1,7 +1,7 @@
 import UIKit
 
 // Structure for customizing the style of the UILabel.
-public struct LabelStyleAttributes {
+public struct TitleStyleAttributes {
     
     var backgroundColor: UIColor?  // Label background color.
     var clipsToBounds: Bool?  // Specifies whether to crop the content outside the label layer boundaries.

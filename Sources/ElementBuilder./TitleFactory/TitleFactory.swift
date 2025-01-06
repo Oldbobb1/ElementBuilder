@@ -1,15 +1,15 @@
 import UIKit
 
 //Factory for creating and customizing "UILabel"
-public struct LabelFactory {
+public struct TitleFactory {
     /// Creates and customizes `UILabel`.
     /// - Parameters:
     /// - textAttributes: Label text attributes.
     /// - styleAttributes: Attributes the label's style.
     /// - Returns: A customized instance of `UILabel`.
-    public  static func makeLabel(
-        textAttributes: LabelTextAttributes? = nil,
-        styleAttributes: LabelStyleAttributes? = nil
+    public  static func makeTitle(
+        textAttributes: TitleTextAttributes? = nil,
+        styleAttributes: TitleStyleAttributes? = nil
     ) -> UILabel {
         
         let label = UILabel()

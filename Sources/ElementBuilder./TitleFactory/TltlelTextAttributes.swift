@@ -1,7 +1,7 @@
 import UIKit
 
 // Structure for customizing the `UILabel` text.
-public struct LabelTextAttributes {
+public struct TitleTextAttributes {
     
     var text: String?    // Label text.
     var fontSize: CGFloat?   // Font size.
