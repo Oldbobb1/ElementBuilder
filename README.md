@@ -14,7 +14,7 @@
 * [ButtonFactory](#buttonFactory)
 * [ContainerViewFactory](#containerViewFactory) 
 * [DatePickerFactory](#datePickerFactory)
-* [LabelFactory](#labelFactory)
+* [TitleFactory](#TitleFactory)
 * [StackViewFactory](#stackViewFactory)
 * [TextFieldFactory](#textFieldFactory) 
 * [DateAndWeekDayFormatter](#dateAndWeekDayFormatter)
@@ -176,18 +176,18 @@ let container = ContainerViewFactory.makeContainerView(
 )
 ```
 
-### LabelFactory 
+### TitleFactory 
 * **Purpose**: Builds labels with specific text and style attributes.
 * **Usage**:
 ```swift 
-  let titleLabel = LabelFactory.makeLabel(textAttributes: LabelTextAttributes(
+  let titleLabel = TitleFactory.makeTitle(textAttributes: TitleTextAttributes(
       text:"Title Label",
       fontSize: 30,
       weight: .bold,
       wtextColor: .black,
       wtextAlignment: .center
    ),
-      styleAttributes:LabelStyleAttributes(
+      styleAttributes: TitleStyleAttributes(
       backgroundColor: .clear,
       clipsToBounds: false
    )
