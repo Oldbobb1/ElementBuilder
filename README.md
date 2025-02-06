@@ -1,9 +1,14 @@
 <!--<img src="/image/logo.png" width="1300" height="180">-->
 
-<!--<p align="left">-->
-<!--  <img src="/image/icon/ElementBuilder.jpeg" width="150" height="150" align="middle"/>-->
-<!--  <span style="display: inline-block; vertical-align: middle; padding-left: 20px;">ElementBuilder</span>-->
-<!--</p>-->
+<p align="left">
+  <img src="/image/icon/ElementBuilder.png" width="150" height="150" align="middle"/>
+  <span style="display: inline-block; vertical-align: middle; padding-left: 20px;">ElementBuilder</span>
+</p>
+
+<p align="left" style="display: flex; justify-content: flex-start;">
+  <img src="/image/icon/ElementBuilderLogo.png" width="150" height="150" />
+  <img src="/image/icon/ElementBuilderName.png" width="150" height="150" />
+</p>
 
 # 🚀 About
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It provides factory structs for reusable, customizable UI elements with minimal code. Additionally, it includes tools for handling swipe gestures and working with dates.
