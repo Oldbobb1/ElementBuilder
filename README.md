@@ -1,5 +1,9 @@
-<!--<img src="https://github.com/user-attachments/assets/31efbbc1-a6bb-4765-abdc-32300d9d0321" width="1300" height="180" alt="header">-->
-<img src="/image/logo.png" width="1300" height="180">
+<!--<img src="/image/logo.png" width="1300" height="180">-->
+
+<!--<p align="left">-->
+<!--  <img src="/image/icon/ElementBuilder.jpeg" width="150" height="150" align="middle"/>-->
+<!--  <span style="display: inline-block; vertical-align: middle; padding-left: 20px;">ElementBuilder</span>-->
+<!--</p>-->
 
 # 🚀 About
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It provides factory structs for reusable, customizable UI elements with minimal code. Additionally, it includes tools for handling swipe gestures and working with dates.
@@ -11,16 +15,16 @@
 - 📆 **Date Utilities**: Format and display dates in your UI seamlessly.
 
 # 📋 Сontent 
-* [ButtonFactory](#buttonFactory)
-* [ContainerViewFactory](#containerViewFactory) 
-* [DatePickerFactory](#datePickerFactory)
-* [TitleFactory](#TitleFactory)
-* [StackViewFactory](#stackViewFactory)
-* [TextFieldFactory](#textFieldFactory) 
+* [ButtonBuilder](#buttonBuilder)
 * [DateAndWeekDayFormatter](#dateAndWeekDayFormatter)
-* [GradientFactory](#gradientFactory)
-* [ImageViewFactory](#imageViewFactory)
+* [DatePickerBuilder](#datePickerBuilder)
+* [GradientBuilder](#gradientBuilder)
+* [ImageViewBuilder](#imageViewBuilder)
+* [LabelBuilder](#LabelBuilder)
+* [StackViewBuilder](#stackViewBuilder)
 * [SwipeGestureManager](#swipeGestureManager)
+* [TextFieldBuilder](#textFieldBuilder)
+* [UIViewBuilder](#uiViewBuilder) 
 
 # 👮‍♂️ Requirements
 * iOS 17+ 
@@ -29,7 +33,6 @@
 
 # 📦 Installation 
 To add the ElementBuilder library to your Xcode project, follow these steps:
-
 ### Using Swift Package Manager
 
 1.**Open the "Package Dependencies" section in Xcode**: select the “Package Dependencies” tab in the project settings.
@@ -61,56 +64,56 @@ import ElementBuilder
 
 class LoginViewController: UIViewController {
 
- let titleLabel = LabelFactory.makeLabel(
-    textAttributes: LabelTextAttributes(
-        text:"Title Label",
-        fontSize: 30,
-        weight: .bold,
-        wtextColor: .black,
-        wtextAlignment: .center
-    ),
-    styleAttributes:LabelStyleAttributes(
-        backgroundColor: .clear,
-        clipsToBounds: false
+    let titleLabel = LabelFactory.makeLabel(
+        textAttributes: LabelTextAttributes(
+            text: "Title Label",
+            fontSize: 30,
+            weight: .bold,
+            wtextColor: .black,
+            wtextAlignment: .center
+        ),
+        styleAttributes: LabelStyleAttributes(
+            backgroundColor: .clear,
+            clipsToBounds: false
+        )
     )
-)
 
-let buttonCloseView = ButtonFactory.makeButton(
-    appearanceAttributes: ButtonAppearanceAttributes(
-        cornerRadius: 17,
-        clipsToBounds: false,
-        backgroundColor: .clear
-    ),
-    shadowAttributes: ShadowAttributes(
-        shadowColor: UIColor.systemRed.cgColor,
-        shadowOffset: CGSize(width: 0, height: 0),
-        shadowOpacity: 0.6,
-        shadowRadius: 3
-    ),
-    imageAttributes: ButtonImageAttributes(
-        systemName:"x.circle",
-        imageSize: CGSize(width: 39, height: 38) ,
-        alpha: 1,
-        tintColor: .red
+    let buttonCloseView = ButtonFactory.makeButton(
+        appearanceAttributes: ButtonAppearanceAttributes(
+            cornerRadius: 17,
+            clipsToBounds: false,
+            backgroundColor: .clear
+        ),
+        shadowAttributes: ShadowAttributes(
+            shadowColor: UIColor.systemRed.cgColor,
+            shadowOffset: CGSize(width: 0, height: 0),
+            shadowOpacity: 0.6,
+            shadowRadius: 3
+        ),
+        imageAttributes: ButtonImageAttributes(
+            systemName: "x.circle",
+            imageSize: CGSize(width: 39, height: 38),
+            alpha: 1,
+            tintColor: .red
+        )
     )
-)
-  
-  override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      view.addSubview(titleLabel)
-      view.addSubview(buttonCloseView)
-      
-      titleLabel.snp.makeConstraints { make in
-        make.top.equalTo(10)
-        make.leading.equalTo(10)
-        make.trailing.equalTo(-10)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.addSubview(titleLabel)
+        view.addSubview(buttonCloseView)
+
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(10)
+            make.leading.equalTo(10)
+            make.trailing.equalTo(-10)
+        }
+        buttonCloseView.snp.makeConstraints { make in
+            make.top.equalTo(10)
+            make.leading.equalTo(20)
+        }
     }
-      buttonCloseView.snp.makeConstraints { make in      
-        make.top.equalTo(10)
-        make.leading.equalTo(20)
-    }
-  }
 }
 ``` 
 
@@ -161,76 +164,6 @@ let container = ContainerViewFactory.makeContainerView(
 )
 ```
 
-### DatePickerFactory 
-* **Purpose**: Creates a date picker with customizable styles.
-* **Usage**:
-```swift 
- let datePicker = DatePickerFactory.makeDatePicker(
-    appearanceAttributes: DatePickerAppearanceAttributes(
-        datePickerMode: .time,
-        preferredDatePickerStyle: .wheels,
-        cornerRadius: 15,
-        masksToBounds: true,
-        backgroundColor: .systemGray6
-    )
-)
-```
-
-### TitleFactory 
-* **Purpose**: Builds labels with specific text and style attributes.
-* **Usage**:
-```swift 
-  let titleLabel = TitleFactory.makeTitle(textAttributes: TitleTextAttributes(
-      text:"Title Label",
-      fontSize: 30,
-      weight: .bold,
-      wtextColor: .black,
-      wtextAlignment: .center
-   ),
-      styleAttributes: TitleStyleAttributes(
-      backgroundColor: .clear,
-      clipsToBounds: false
-   )
-)
-```
-
-### StackViewFactory 
-* **Purpose**: Creates stack views with flexible layouts.
-* **Usage**:
-```swift 
- let stackView = StackViewFactory.makeStackView(
-    configuration: StackViewConfiguration(
-        axis: .horizontal,
-        distribution: .fillEqually,
-        backgroundColor: .clear
-    ),
-    style: StackViewStyle(
-        cornerRadius: 10,
-        spacing: 10,
-        layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
-    )
-)
-```
-
-### TextFieldFactory 
-* **Purpose**: Creates text fields with customizable appearance and shadow styles.
-* **Usage**:
-```swift
-let textField = TextFieldFactory.makeTextField(
-    appearanceProperties: TextFieldAppearanceProperties(
-        placeholder:"text",
-        backgroundColor: .systemGray6,
-        clipsToBounds: false
-    ),
-    shadowAttributes: ShadowAttributes(
-        color: UIColor.darkGray.cgColor,
-        offset: .init(width: 0, height: 0),
-        opacity: 1,
-        radius: 3
-    )
-)
-```
-
 ### DateAndWeekDayFormatter 
 * **Purpose**: Simplifies date formatting and displays dates with corresponding weekdays in UI elements like stack views.
 * **Usage**:
@@ -272,46 +205,77 @@ class MyViewController: UIViewController {
 }
 ```
 
-### GradientFactory 
+### DatePickerFactory 
+* **Purpose**: Creates a date picker with customizable styles.
+* **Usage**:
+```swift 
+ let datePicker = DatePickerFactory.makeDatePicker(
+    appearanceAttributes: DatePickerAppearanceAttributes(
+        datePickerMode: .time,
+        preferredDatePickerStyle: .wheels,
+        cornerRadius: 15,
+        masksToBounds: true,
+        backgroundColor: .systemGray6
+    )
+)
+```
+### GradientBuilder 
 * **Purpose**: Adds gradient layers to views.
 * **Usage**:
 1.
 ```swift 
-  let gradient = GradientFactory.makeGradientLayer(
-      startColor: .systemBlue,
-      endColor: .systemIndigo
+let gradientController = GradientBuilder.gradient(
+    firstColor: .systemBlue,
+    secondColor: .systemIndigo
 )
 ```
 2.
 ```swift 
-  let gradient = GradientFactory.makeGradientLayer(
-      startColor: .systemBlue,
-      endColor: .systemIndigo, 
-      alpha: 0.6
+let gradientTableView = GradientBuilder.gradient(
+    firstColor: .systemBlue,
+    secondColor: .systemIndigo,
+    alphaColor: 0.6
 )
 ```
 
-### ImageViewFactory 
-* **Purpose**: Creates image views with system or custom images, supporting various styles such as corner radius and content mode.
+### ImageViewBuilder 
+* **Purpose**: Creates image views with system or custom images, supporting various styles.
 * **Usage**:
 1.
 ```swift 
-  let yourImage = ImageViewFactory.makeImage(
-      “yourNameImage”,
-      cornerRadius: 20,
-      contentMode: . scaleAspectFit,
-      clipsToBounds: true 
-) 
+let yourImage = ImageViewBuilder.image(
+    named:"yourNameImage",
+    cornerRadius: 20,
+    contentMode: . scaleAspectFit,
+    clipsToBounds: true
+)
 ```
 2.
 ```swift 
-  let systemImage = ImageViewFactory.makeSystemImageViews(
-      systemName:”plus.circle”,
-      tintColor: .red,
-      contentMode: . scaleAspectFit
+let systemImage = ImageViewBuilder.systemImage(
+    systemName:"plus.circle",
+    tintColor: .red,
+    contentMode: . scaleAspectFit
 )
 ```
 
+### StackViewFactory 
+* **Purpose**: Creates stack views with flexible layouts.
+* **Usage**:
+```swift 
+ let stackView = StackViewFactory.makeStackView(
+    configuration: StackViewConfiguration(
+        axis: .horizontal,
+        distribution: .fillEqually,
+        backgroundColor: .clear
+    ),
+    style: StackViewStyle(
+        cornerRadius: 10,
+        spacing: 10,
+        layoutMargins: .init(top: 10, left: 10, bottom: 10, right: 10)
+    )
+)
+```
 ### SwipeGestureManager 
 
 * **Purpose**: Simplifies swipe gesture handling.
@@ -339,9 +303,42 @@ class MyViewController: UIViewController {
     }
 }
 ```
+### TextFieldFactory 
+* **Purpose**: Creates text fields with customizable appearance and shadow styles.
+* **Usage**:
+```swift
+let textField = TextFieldFactory.makeTextField(
+    appearanceProperties: TextFieldAppearanceProperties(
+        placeholder:"text",
+        backgroundColor: .systemGray6,
+        clipsToBounds: false
+    ),
+    shadowAttributes: ShadowAttributes(
+        color: UIColor.darkGray.cgColor,
+        offset: .init(width: 0, height: 0),
+        opacity: 1,
+        radius: 3
+    )
+)
+```
 
-<!--# 🧪 Tests-->
-<!--ElementBuilder includes unit tests for all major factories to ensure reliability and smooth integration. Simply run the ElementBuilderTests target to verify functionality.-->
+### TitleFactory 
+* **Purpose**: Builds labels with specific text and style attributes.
+* **Usage**:
+```swift 
+  let titleLabel = TitleFactory.makeTitle(textAttributes: TitleTextAttributes(
+      text:"Title Label",
+      fontSize: 30,
+      weight: .bold,
+      wtextColor: .black,
+      wtextAlignment: .center
+   ),
+      styleAttributes: TitleStyleAttributes(
+      backgroundColor: .clear,
+      clipsToBounds: false
+   )
+)
+```
 
 ## Conclusion
 **ElementBuilder** a framework offers developers powerful and convenient tools for creating and managing UI elements in UIKit-based applications. It reduces the amount of code needed for UI development and makes the process of building interfaces more intuitive and flexible.

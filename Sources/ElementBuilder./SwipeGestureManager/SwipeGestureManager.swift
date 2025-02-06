@@ -1,5 +1,6 @@
 import UIKit
 
+//MARK: Переделать ! 
 // A class to control swipe gestures in an application.
 public class SwipeGestureManager {
     
