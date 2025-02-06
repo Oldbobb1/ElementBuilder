@@ -19,7 +19,6 @@ public struct DateAndWeekDayFormatter {
         to stackView: UIStackView,
         withDay day: Date
     ) {
-
         let dateFormatter = DateFormatter()  //  Create a formatter to get the day of the week.
         dateFormatter.dateFormat = "EE"  //  Abbreviated name of the day of the week.
         let calendar = Calendar.current  //  Get the current calendar.
