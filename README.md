@@ -1,6 +1,6 @@
 <p align="left" style="display: flex; justify-content: flex-start;">
-  <img src="/image/icon/ElementBuilderLogo.png" width="150" height="150" />
-  <img src="/image/icon/ElementBuilderName.png" width="350" height="150" />
+  <img src="/image/ElementBuilderLogo.png" width="150" height="150" />
+  <img src="/image/ElementBuilderName.png" width="350" height="150" />
 </p>
 
 # 🚀 About
