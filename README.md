@@ -27,7 +27,7 @@
 # 👮‍♂️ Requirements
 * iOS 17+ 
 * Xcode 15+
-* Swift 5.5+ 
+* Swift 5.9 
 
 # 📦 Installation 
 To add the ElementBuilder library to your Xcode project, follow these steps:

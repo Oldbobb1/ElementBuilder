@@ -34,7 +34,7 @@ final class UIViewBuilderTest: XCTestCase {
 
     func testDefaultValue() {
         let testView = UIViewBuilder.uiView()
-        
+
         XCTAssertEqual(testView.backgroundColor, .systemGray6)
     }
 
