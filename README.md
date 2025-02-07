@@ -221,7 +221,7 @@ let gradientTableView = GradientBuilder.gradient(
 * **Usage**:
 1.
 ```swift 
-let yourImage = ImageViewBuilder.image(
+let yourImage = ImageViewBuilder.imageAndSystemImage(
     named:"yourNameImage",
     cornerRadius: 20,
     contentMode: . scaleAspectFit,
@@ -230,7 +230,7 @@ let yourImage = ImageViewBuilder.image(
 ```
 2.
 ```swift 
-let systemImage = ImageViewBuilder.systemImage(
+let systemImage = ImageViewBuilder.imageAndSystemImage(
     systemName:"plus.circle",
     tintColor: .red,
     contentMode: . scaleAspectFit
