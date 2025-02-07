@@ -222,7 +222,7 @@ let gradientTableView = GradientBuilder.gradient(
 1.
 ```swift 
 let yourImage = ImageViewBuilder.imageAndSystemImage(
-    named:"yourNameImage",
+    named: "yourNameImage",
     cornerRadius: 20,
     contentMode: . scaleAspectFit,
     clipsToBounds: true
@@ -231,7 +231,7 @@ let yourImage = ImageViewBuilder.imageAndSystemImage(
 2.
 ```swift 
 let systemImage = ImageViewBuilder.imageAndSystemImage(
-    systemName:"plus.circle",
+    systemName: "plus.circle",
     tintColor: .red,
     contentMode: . scaleAspectFit
 )
@@ -306,7 +306,7 @@ class MyViewController: UIViewController {
 ```swift
 let textField = TextFieldBuilder.textField(
     TextInputConfiguration(
-        placeholder:"text",
+        placeholder: "text",
         placeholderTextColor: .label,
         textContentType: .name,
         returnKeyType: .default
@@ -330,7 +330,7 @@ let textField = TextFieldBuilder.textField(
 ```swift 
 let container = ContainerViewFactory.makeContainerView(
     appearanceAttributes: ViewAppearanceAttributes(
-        backgroundColor:.systemGray6,
+        backgroundColor: .systemGray6,
         cornerRadius: 25
     ),
     shadowAttributes: ShadowAttributes(
