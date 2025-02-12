@@ -21,9 +21,14 @@ public struct ButtonBuilder {
         button.translatesAutoresizingMaskIntoConstraints = false
         // Applying appearance attributes.
         if let buttonAppearanceAttributes = buttonAppearanceAttributes {
-            button.setTitle(buttonAppearanceAttributes.setTitle, for: .normal)
+            button.setTitle(
+                buttonAppearanceAttributes.setTitle,
+                for: .normal
+            )
             button.setTitleColor(
-                buttonAppearanceAttributes.setTitleColor, for: .normal)
+                buttonAppearanceAttributes.setTitleColor,
+                for: .normal
+            )
             button.titleLabel?.font = buttonAppearanceAttributes.font
             button.configuration = buttonAppearanceAttributes.configuration
             button.backgroundColor =
@@ -48,16 +53,28 @@ public struct ButtonBuilder {
                         buttonImageAttributes.imageSize
                         ?? CGSize(
                             width: buttonImageAttributes.width ?? 65,
-                            height: buttonImageAttributes.height ?? 60)
+                            height: buttonImageAttributes.height ?? 60
+                        )
                     UIGraphicsBeginImageContext(newSize)
-                    image.draw(in: CGRect(origin: .zero, size: newSize))
+                    image.draw(
+                        in: CGRect(
+                            origin: .zero,
+                            size: newSize
+                        )
+                    )
                     let newImage = UIGraphicsGetImageFromCurrentImageContext()
                     UIGraphicsEndImageContext()
-                    button.setImage(newImage, for: .normal)
+                    button.setImage(
+                        newImage,
+                        for: .normal
+                    )
                     button.alpha = buttonImageAttributes.alpha ?? 1.0
                 }
             } else if let setImage = buttonImageAttributes.setImage {
-                button.setImage(setImage, for: .normal)
+                button.setImage(
+                    setImage,
+                    for: .normal
+                )
                 button.alpha = buttonImageAttributes.alpha ?? 1.0
             }
         }

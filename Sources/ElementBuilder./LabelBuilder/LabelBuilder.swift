@@ -22,7 +22,8 @@ public struct LabelBuilder {
             label.textAlignment = textInputSetting.textAlignment ?? .center
             label.font = UIFont.systemFont(
                 ofSize: textInputSetting.fontSize ?? 10,
-                weight: textInputSetting.weight ?? .bold)
+                weight: textInputSetting.weight ?? .bold
+            )
             label.numberOfLines = textInputSetting.numberOfLines ?? 0
         }
         if let labelSetting = labelSetting {

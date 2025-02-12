@@ -14,7 +14,12 @@ final class DateAndWeekDayFormatterTest: XCTestCase {
 
     func testDateFormatter() {
         let testDate = Calendar.current.date(
-            from: DateComponents(year: 2024, month: 12, day: 7))!
+            from: DateComponents(
+                year: 2024,
+                month: 12,
+                day: 7
+            )
+        )!
 
         dateFormatter.dateCurrent(
             to: stackView,

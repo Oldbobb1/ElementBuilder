@@ -19,17 +19,38 @@ final class UIViewBuilderTest: XCTestCase {
     func testStyleView() {
         let testStyle = ShadowSetting(
             shadowColor: UIColor.black.cgColor,
-            shadowOffset: .init(width: 2, height: 1),
+            shadowOffset: .init(
+                width: 2,
+                height: 1
+            ),
             shadowOpacity: 1,
             shadowRadius: 4
         )
 
-        let testView = UIViewBuilder.uiView(nil, testStyle)
+        let testView = UIViewBuilder.uiView(
+            nil,
+            testStyle
+        )
 
-        XCTAssertEqual(testView.layer.shadowColor, UIColor.black.cgColor)
-        XCTAssertEqual(testView.layer.shadowOffset, .init(width: 2, height: 1))
-        XCTAssertEqual(testView.layer.shadowOpacity, 1)
-        XCTAssertEqual(testView.layer.shadowRadius, 4)
+        XCTAssertEqual(
+            testView.layer.shadowColor,
+            UIColor.black.cgColor
+        )
+        XCTAssertEqual(
+            testView.layer.shadowOffset,
+                .init(
+                    width: 2,
+                    height: 1
+                )
+        )
+        XCTAssertEqual(
+            testView.layer.shadowOpacity,
+            1
+        )
+        XCTAssertEqual(
+            testView.layer.shadowRadius,
+            4
+        )
     }
 
     func testDefaultValue() {
@@ -46,7 +67,10 @@ final class UIViewBuilderTest: XCTestCase {
 
         let testStyle = ShadowSetting(
             shadowColor: UIColor.black.cgColor,
-            shadowOffset: .init(width: 2, height: 1),
+            shadowOffset: .init(
+                width: 2,
+                height: 1
+            ),
             shadowOpacity: 1,
             shadowRadius: 4
         )
@@ -56,11 +80,32 @@ final class UIViewBuilderTest: XCTestCase {
             testStyle
         )
 
-        XCTAssertEqual(testView.backgroundColor, .black)
-        XCTAssertEqual(testView.layer.cornerRadius, 10)
-        XCTAssertEqual(testView.layer.shadowColor, UIColor.black.cgColor)
-        XCTAssertEqual(testView.layer.shadowOffset, .init(width: 2, height: 1))
-        XCTAssertEqual(testView.layer.shadowOpacity, 1)
-        XCTAssertEqual(testView.layer.shadowRadius, 4)
+        XCTAssertEqual(
+            testView.backgroundColor,
+                .black
+        )
+        XCTAssertEqual(
+            testView.layer.cornerRadius,
+            10
+        )
+        XCTAssertEqual(
+            testView.layer.shadowColor,
+            UIColor.black.cgColor
+        )
+        XCTAssertEqual(
+            testView.layer.shadowOffset,
+                .init(
+                    width: 2,
+                    height: 1
+                )
+        )
+        XCTAssertEqual(
+            testView.layer.shadowOpacity,
+            1
+        )
+        XCTAssertEqual(
+            testView.layer.shadowRadius,
+            4
+        )
     }
 }

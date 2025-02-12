@@ -16,14 +16,31 @@ final class LabelBuilderTest: XCTestCase {
 
         let testTextLabel = LabelBuilder.label(textAttribut)
 
-        XCTAssertEqual(testTextLabel.text, "Test")
-        XCTAssertEqual(testTextLabel.textColor, UIColor.systemBackground)
-        XCTAssertEqual(testTextLabel.textAlignment, .center)
-        XCTAssertEqual(testTextLabel.font.pointSize, 17)
+        XCTAssertEqual(
+            testTextLabel.text,
+            "Test"
+        )
+        XCTAssertEqual(
+            testTextLabel.textColor,
+            UIColor.systemBackground
+        )
+        XCTAssertEqual(
+            testTextLabel.textAlignment,
+                .center
+        )
+        XCTAssertEqual(
+            testTextLabel.font.pointSize,
+            17
+        )
         XCTAssertEqual(
             testTextLabel.font.fontDescriptor.symbolicTraits.contains(
-                .traitBold), true)
-        XCTAssertEqual(testTextLabel.numberOfLines, 0)
+                .traitBold),
+            true
+        )
+        XCTAssertEqual(
+            testTextLabel.numberOfLines,
+            0
+        )
     }
 
     func testLabelStyleAttributes() {
@@ -33,19 +50,34 @@ final class LabelBuilderTest: XCTestCase {
             clipsToBounds: true
         )
 
-        let testStyleLabel = LabelBuilder.label(nil, styleAtribut)
+        let testStyleLabel = LabelBuilder.label(
+            nil,
+            styleAtribut
+        )
 
-        XCTAssertEqual(testStyleLabel.backgroundColor, UIColor.black)
+        XCTAssertEqual(
+            testStyleLabel.backgroundColor,
+            UIColor.black
+        )
         XCTAssertFalse(testStyleLabel.clipsToBounds)
-        XCTAssertEqual(testStyleLabel.layer.cornerRadius, 10)
+        XCTAssertEqual(
+            testStyleLabel.layer.cornerRadius,
+            10
+        )
     }
 
     func testDefaultValue() {
         let testDefaultlabel = LabelBuilder.label()
         
         XCTAssertNil(testDefaultlabel.text)
-        XCTAssertEqual(testDefaultlabel.textAlignment, .center)
-        XCTAssertEqual(testDefaultlabel.font.pointSize, 20)
+        XCTAssertEqual(
+            testDefaultlabel.textAlignment,
+                .center
+        )
+        XCTAssertEqual(
+            testDefaultlabel.font.pointSize,
+            20
+        )
         XCTAssertNil(testDefaultlabel.backgroundColor)
     }
 
@@ -70,16 +102,39 @@ final class LabelBuilderTest: XCTestCase {
             styleAtribut
         )
 
-        XCTAssertEqual(testCombinedValueLabel.text, "Test")
-        XCTAssertEqual(testCombinedValueLabel.textColor, UIColor.green)
-        XCTAssertEqual(testCombinedValueLabel.textAlignment, .right)
-        XCTAssertEqual(testCombinedValueLabel.font.pointSize, 14)
+        XCTAssertEqual(
+            testCombinedValueLabel.text,
+            "Test"
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.textColor,
+            UIColor.green
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.textAlignment,
+                .right
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.font.pointSize,
+            14
+        )
         XCTAssertEqual(
             testCombinedValueLabel.font.fontDescriptor.symbolicTraits.contains(
-                .traitBold), false)
-        XCTAssertEqual(testCombinedValueLabel.numberOfLines, 2)
-        XCTAssertEqual(testCombinedValueLabel.backgroundColor, UIColor.orange)
-        XCTAssertEqual(testCombinedValueLabel.layer.cornerRadius, 10)
+                .traitBold),
+            false
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.numberOfLines,
+            2
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.backgroundColor,
+            UIColor.orange
+        )
+        XCTAssertEqual(
+            testCombinedValueLabel.layer.cornerRadius,
+            10
+        )
         XCTAssertFalse(testCombinedValueLabel.clipsToBounds)
     }
 }

@@ -14,12 +14,26 @@ final class DatePickerBuilderTest: XCTestCase {
             masksToBounds: true
         )
         
-        let testDatePicker = DatePickerBuilder.datePicker(testAppearence)
+        let testDatePicker = DatePickerBuilder.datePicker(
+            testAppearence
+        )
         
-        XCTAssertEqual(testDatePicker.datePickerMode, .dateAndTime)
-        XCTAssertEqual(testDatePicker.preferredDatePickerStyle, .wheels)
-        XCTAssertEqual(testDatePicker.backgroundColor, .black)
-        XCTAssertEqual(testDatePicker.layer.cornerRadius, 15)
+        XCTAssertEqual(
+            testDatePicker.datePickerMode,
+                .dateAndTime
+        )
+        XCTAssertEqual(
+            testDatePicker.preferredDatePickerStyle,
+                .wheels
+        )
+        XCTAssertEqual(
+            testDatePicker.backgroundColor,
+                .black
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.cornerRadius,
+            15
+        )
         XCTAssertFalse(testDatePicker.clipsToBounds)
         XCTAssertTrue(testDatePicker.layer.masksToBounds)
     }
@@ -27,26 +41,55 @@ final class DatePickerBuilderTest: XCTestCase {
     func testStyleDatePicker() {
         let testStyle = ShadowSetting(
             shadowColor: UIColor.black.cgColor,
-            shadowOffset: .init(width: 1, height: 2),
+            shadowOffset: .init(
+                width: 1,
+                height: 2
+            ),
             shadowOpacity: 3,
             shadowRadius: 4
         )
 
-        let testDatePicker = DatePickerBuilder.datePicker(nil, testStyle)
+        let testDatePicker = DatePickerBuilder.datePicker(
+            nil,
+            testStyle
+        )
 
-        XCTAssertEqual(testDatePicker.layer.shadowColor, UIColor.black.cgColor)
         XCTAssertEqual(
-            testDatePicker.layer.shadowOffset, .init(width: 1, height: 2))
-        XCTAssertEqual(testDatePicker.layer.shadowOpacity, 3)
-        XCTAssertEqual(testDatePicker.layer.shadowRadius, 4)
+            testDatePicker.layer.shadowColor,
+            UIColor.black.cgColor
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowOffset,
+                .init(
+                    width: 1,
+                    height: 2
+                )
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowOpacity,
+            3
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowRadius,
+            4
+        )
     }
 
     func testDefaultValue() {
         let testDatePicker = DatePickerBuilder.datePicker()
 
-        XCTAssertEqual(testDatePicker.datePickerMode, .dateAndTime)
-        XCTAssertEqual(testDatePicker.preferredDatePickerStyle, .wheels)
-        XCTAssertEqual(testDatePicker.backgroundColor, .black)
+        XCTAssertEqual(
+            testDatePicker.datePickerMode,
+                .dateAndTime
+        )
+        XCTAssertEqual(
+            testDatePicker.preferredDatePickerStyle,
+                .wheels
+        )
+        XCTAssertEqual(
+            testDatePicker.backgroundColor,
+                .black
+        )
     }
 
     func testCombinedValues() {
@@ -61,7 +104,10 @@ final class DatePickerBuilderTest: XCTestCase {
 
         let testStyle = ShadowSetting(
             shadowColor: UIColor.black.cgColor,
-            shadowOffset: .init(width: 1, height: 2),
+            shadowOffset: .init(
+                width: 1,
+                height: 2
+            ),
             shadowOpacity: 3,
             shadowRadius: 4
         )
@@ -71,16 +117,46 @@ final class DatePickerBuilderTest: XCTestCase {
             testStyle
         )
 
-        XCTAssertEqual(testDatePicker.datePickerMode, .dateAndTime)
-        XCTAssertEqual(testDatePicker.preferredDatePickerStyle, .wheels)
-        XCTAssertEqual(testDatePicker.backgroundColor, .black)
-        XCTAssertEqual(testDatePicker.layer.cornerRadius, 15)
-        XCTAssertFalse(testDatePicker.clipsToBounds)
-        XCTAssertTrue(testDatePicker.layer.masksToBounds)
-        XCTAssertEqual(testDatePicker.layer.shadowColor, UIColor.black.cgColor)
         XCTAssertEqual(
-            testDatePicker.layer.shadowOffset, .init(width: 1, height: 2))
-        XCTAssertEqual(testDatePicker.layer.shadowOpacity, 3)
-        XCTAssertEqual(testDatePicker.layer.shadowRadius, 4)
+            testDatePicker.datePickerMode,
+                .dateAndTime
+        )
+        XCTAssertEqual(
+            testDatePicker.preferredDatePickerStyle,
+                .wheels
+        )
+        XCTAssertEqual(
+            testDatePicker.backgroundColor,
+                .black
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.cornerRadius,
+            15
+        )
+        XCTAssertFalse(
+            testDatePicker.clipsToBounds
+        )
+        XCTAssertTrue(
+            testDatePicker.layer.masksToBounds
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowColor,
+            UIColor.black.cgColor
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowOffset,
+                .init(
+                    width: 1,
+                    height: 2
+                )
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowOpacity,
+            3
+        )
+        XCTAssertEqual(
+            testDatePicker.layer.shadowRadius,
+            4
+        )
     }
 }

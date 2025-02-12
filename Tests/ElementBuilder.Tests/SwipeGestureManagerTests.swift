@@ -16,8 +16,12 @@ class SwipeGestureManagerTests: XCTestCase {
         rightSwipeActionCalled = false
         swipeGestureManager = SwipeGestureManager(
             viewController: viewController,
-            leftAction: { self.leftSwipeActionCalled = true },
-            rightAction: { self.rightSwipeActionCalled = true }
+            leftAction: {
+                self.leftSwipeActionCalled = true
+            },
+            rightAction: {
+                self.rightSwipeActionCalled = true
+            }
         )
     }
 
@@ -37,8 +41,7 @@ class SwipeGestureManagerTests: XCTestCase {
         swipeLeft.state = .ended
         swipeGestureManager.handleSwipeLeft()
 
-        XCTAssertTrue(
-            leftSwipeActionCalled, "Left swipe action should be called")
+        XCTAssertTrue(leftSwipeActionCalled, "Left swipe action should be called")
     }
 
     func testSwipeRight() {
@@ -51,7 +54,6 @@ class SwipeGestureManagerTests: XCTestCase {
         swipeRight.state = .ended
         swipeGestureManager.handleSwipeRight()
 
-        XCTAssertTrue(
-            rightSwipeActionCalled, "Right swipe action should be called")
+        XCTAssertTrue(rightSwipeActionCalled, "Right swipe action should be called")
     }
 }

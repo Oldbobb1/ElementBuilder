@@ -6,9 +6,7 @@ import UIKit
 public class SwipeGestureManager {
 
     public typealias SwipeAction = () -> Void  //  The type of action performed when you swipe.
-
     weak var viewController: UIViewController?  //  Weak reference to the controller to which the gestures are attached.
-
     private var leftAction: SwipeAction  //  Action performed when swiping left.
     private var rightAction: SwipeAction  //  Action performed when swiping right.
 
