@@ -27,28 +27,20 @@ public struct TextFieldBuilder {
                         textInputConfiguration
                         .placeholderTextColor ?? .label
                 ])
-            textField.textContentType =
-                textInputConfiguration.textContentType ?? .name
-            textField.keyboardType =
-                textInputConfiguration.keyboardType ?? .default
-            textField.autocapitalizationType =
-                textInputConfiguration.autocapitalizationType ?? .none
-            textField.spellCheckingType =
-                textInputConfiguration.spellCheckingType ?? .no
-            textField.enablesReturnKeyAutomatically =
-                textInputConfiguration.enablesReturnKeyAutomatically ?? true
-            textField.clearButtonMode =
-                textInputConfiguration.clearButtonMode ?? .whileEditing
-            textField.returnKeyType =
-                textInputConfiguration.returnKeyType ?? .default
+            textField.textContentType = textInputConfiguration.textContentType ?? .name
+            textField.keyboardType = textInputConfiguration.keyboardType ?? .default
+            textField.autocapitalizationType = textInputConfiguration.autocapitalizationType ?? .none
+            textField.spellCheckingType = textInputConfiguration.spellCheckingType ?? .no
+            textField.enablesReturnKeyAutomatically = textInputConfiguration.enablesReturnKeyAutomatically ?? true
+            textField.clearButtonMode = textInputConfiguration.clearButtonMode ?? .whileEditing
+            textField.returnKeyType = textInputConfiguration.returnKeyType ?? .default
         }
         if let textFieldAppearance = textFieldAppearance {
             textField.backgroundColor = textFieldAppearance.backgroundColor
             textField.layer.cornerRadius = textFieldAppearance.cornerRadius ?? 0
             textField.font = textFieldAppearance.font
             textField.clipsToBounds = textFieldAppearance.clipsToBounds ?? false
-            textField.contentMode =
-                textFieldAppearance.contentMode ?? .scaleAspectFit
+            textField.contentMode = textFieldAppearance.contentMode ?? .scaleAspectFit
         }
         if let shadowSetting = shadowSetting {
             textField.layer.shadowColor = shadowSetting.shadowColor

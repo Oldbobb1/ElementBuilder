@@ -4,18 +4,18 @@ import UIKit
 //  A class to control swipe gestures in an application.
 
 public class SwipeGestureManager {
-
+    
     public typealias SwipeAction = () -> Void  //  The type of action performed when you swipe.
     weak var viewController: UIViewController?  //  Weak reference to the controller to which the gestures are attached.
     private var leftAction: SwipeAction  //  Action performed when swiping left.
     private var rightAction: SwipeAction  //  Action performed when swiping right.
-
+    
     // Initializer for configuring swipe gestures.
     //  Parameters:
     //  - viewController: The controller to which the gestures are added.
     //  - leftAction: The action performed when you swipe left.
     //  - rightAction: The action performed by swiping to the right.
-
+    
     public init(
         viewController: UIViewController,
         leftAction: @escaping SwipeAction,
@@ -26,10 +26,10 @@ public class SwipeGestureManager {
         self.rightAction = rightAction
         configureSwipeGestures()
     }
-
+    
     //  Method for customizing swipe gestures.
     //  Causes adding gestures for left and right swipes.
-
+    
     func configureSwipeGestures() {
         addSwipeGesture(direction: .left, action: #selector(handleSwipeLeft))
         addSwipeGesture(direction: .right, action: #selector(handleSwipeRight))
@@ -48,13 +48,15 @@ public class SwipeGestureManager {
         swipeGesture.direction = direction
         viewController?.view.addGestureRecognizer(swipeGesture)
     }
-
+    
     //  Left swipe handler. Calls the action specified for a left swipe.
+    
     @objc func handleSwipeLeft() {
         leftAction()
     }
-
+    
     //  Right swipe handler. Calls the action specified for a right swipe.
+    
     @objc func handleSwipeRight() {
         rightAction()
     }

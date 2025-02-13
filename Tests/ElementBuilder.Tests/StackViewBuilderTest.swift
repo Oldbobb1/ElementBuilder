@@ -18,17 +18,9 @@ final class StackViewBuilderTest: XCTestCase {
             backgroundColor: .blue,
             cornerRadius: 20
         )
-
         let testStackView = StackViewBuilder.stackView(testConfigurStackView)
-
-        XCTAssertEqual(
-            testStackView.axis,
-                .horizontal
-        )
-        XCTAssertEqual(
-            testStackView.spacing,
-            4
-        )
+        XCTAssertEqual(testStackView.axis, .horizontal)
+        XCTAssertEqual(testStackView.spacing, 4)
         XCTAssertEqual(
             testStackView.layoutMargins,
             .init(
@@ -38,20 +30,10 @@ final class StackViewBuilderTest: XCTestCase {
                 right: 0
             )
         )
-        XCTAssertEqual(
-            testStackView.distribution,
-                .fillEqually
-        )
-        XCTAssertEqual(
-            testStackView.backgroundColor,
-                .blue
-        )
-        XCTAssertEqual(
-            testStackView.layer.cornerRadius,
-            20
-        )
+        XCTAssertEqual(testStackView.distribution, .fillEqually)
+        XCTAssertEqual(testStackView.backgroundColor, .blue)
+        XCTAssertEqual(testStackView.layer.cornerRadius, 20)
     }
-
     func testCombinedValue() {
         let testConfigurStackView = StackViewSetting(
             axis: .horizontal,
@@ -66,17 +48,9 @@ final class StackViewBuilderTest: XCTestCase {
             backgroundColor: .blue,
             cornerRadius: 20
         )
-
         let testStackView = StackViewBuilder.stackView(testConfigurStackView)
-
-        XCTAssertEqual(
-            testStackView.axis,
-                .vertical
-        )
-        XCTAssertEqual(
-            testStackView.spacing,
-            10
-        )
+        XCTAssertEqual(testStackView.axis, .vertical)
+        XCTAssertEqual(testStackView.spacing, 10)
         XCTAssertEqual(
             testStackView.layoutMargins,
             .init(
@@ -86,17 +60,8 @@ final class StackViewBuilderTest: XCTestCase {
                 right: 10
             )
         )
-        XCTAssertEqual(
-            testStackView.distribution,
-                .fillProportionally
-        )
-        XCTAssertEqual(
-            testStackView.backgroundColor,
-                .orange
-        )
-        XCTAssertEqual(
-            testStackView.layer.cornerRadius,
-            25
-        )
+        XCTAssertEqual(testStackView.distribution, .fillProportionally)
+        XCTAssertEqual(testStackView.backgroundColor, .orange)
+        XCTAssertEqual(testStackView.layer.cornerRadius, 25)
     }
 }

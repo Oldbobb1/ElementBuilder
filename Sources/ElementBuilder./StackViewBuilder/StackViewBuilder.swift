@@ -17,8 +17,7 @@ public struct StackViewBuilder {
             stackView.axis = stackViewSetting.axis ?? .horizontal
             stackView.spacing = stackViewSetting.spacing ?? 0
             stackView.layoutMargins = stackViewSetting.layoutMargins ?? .zero
-            stackView.distribution =
-                stackViewSetting.distribution ?? .fillEqually
+            stackView.distribution = stackViewSetting.distribution ?? .fillEqually
             stackView.backgroundColor = stackViewSetting.backgroundColor
             stackView.layer.cornerRadius = stackViewSetting.cornerRadius ?? 0
         }

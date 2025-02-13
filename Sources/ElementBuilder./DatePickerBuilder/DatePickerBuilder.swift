@@ -17,15 +17,12 @@ public struct DatePickerBuilder {
     ) -> UIDatePicker {
         let datePicker = UIDatePicker()
         if let datePickerSetting = datePickerSetting {
-            datePicker.datePickerMode =
-                datePickerSetting.datePickerMode ?? .time
-            datePicker.preferredDatePickerStyle =
-                datePickerSetting.preferredDatePickerStyle ?? .wheels
+            datePicker.datePickerMode = datePickerSetting.datePickerMode ?? .time
+            datePicker.preferredDatePickerStyle = datePickerSetting.preferredDatePickerStyle ?? .wheels
             datePicker.backgroundColor = datePickerSetting.backgroundColor
             datePicker.layer.cornerRadius = datePickerSetting.cornerRadius ?? 0
             datePicker.clipsToBounds = datePickerSetting.clipsToBounds ?? false
-            datePicker.layer.masksToBounds =
-                datePickerSetting.masksToBounds ?? false
+            datePicker.layer.masksToBounds = datePickerSetting.masksToBounds ?? false
         }
         if let shadowSetting = shadowSetting {
             datePicker.layer.shadowColor = shadowSetting.shadowColor
