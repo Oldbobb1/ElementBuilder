@@ -1,18 +1,15 @@
-<p align="left" style="display: flex; justify-content: flex-start;">
-<!--  <img src="/image/ElementBuilderLogo.png" width="150" height="150" />-->
-  <img src="/image/logo.png" width="350" height="150" />
-</p>
+# 🧱 ElementBuilder 
 
-# 🚀 About
+## 🚀 About
 **ElementBuilder** is a Swift framework designed to simplify the creation and management of user interface elements in UIKit-based iOS applications. It provides factory structs for reusable, customizable UI elements with minimal code. Additionally, it includes tools for handling swipe gestures and working with dates.
 
-# ✨ Features
+## ✨ Features
 - 🧩 **Modular UI Builders**: buttons, datePicker, gradient, image, label, stackView, textField, uiView.
 - 🌈 **Gradient Layers**: Easily add gradient backgrounds to your views.
 - 🎛️ **Swipe Gesture Manager**: Simplify swipe gesture handling in your view controllers.
 - 📆 **Date Utilities**: Format and display dates in your UI seamlessly.
 
-# 📋 Сontent 
+## 📋 Сontent 
 * [ButtonBuilder](#buttonBuilder)
 * [DateAndWeekDayFormatter](#dateAndWeekDayFormatter)
 * [DatePickerBuilder](#datePickerBuilder)
@@ -24,12 +21,12 @@
 * [TextFieldBuilder](#textFieldBuilder)
 * [UIViewBuilder](#uiViewBuilder) 
 
-# 👮‍♂️ Requirements
+## 👮‍♂️ Requirements
 * iOS 17+ 
 * Xcode 15+
 * Swift 5.9 
 
-# 📦 Installation 
+## 📦 Installation 
 To add the ElementBuilder library to your Xcode project, follow these steps:
 ### Using Swift Package Manager
 
@@ -52,7 +49,7 @@ In the files where you want to use ElementBuilder, import it by adding:
 import ElementBuilder
 ```
 
-# 🛠️ Usage
+## 🛠️ Usage
 * Example: Creating a Login Screen
 * Here’s how to build a basic login screen using **ElementBuilder**:
 ```swift 
@@ -115,7 +112,7 @@ class LoginViewController: UIViewController {
 }
 ``` 
 
-# 📚 Factories Overview
+## 📚 Factories Overview
 Here’s what each factory does and how it simplifies UI creation:
 
 ### ButtonBuilder
